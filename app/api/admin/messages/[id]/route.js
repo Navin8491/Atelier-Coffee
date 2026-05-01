@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import { NextResponse } from "next/server";
 import dbConnect from "@/lib/mongodb";
 import ContactMessage from "@/models/ContactMessage";
@@ -12,7 +13,7 @@ export async function PUT(req, { params }) {
     if (isAuthorized.error) return NextResponse.json({ success: false, message: isAuthorized.error }, { status: isAuthorized.status });
 
     await dbConnect();
-    const { id } = params;
+    const { id } = await params;
     const body = await req.json();
 
     const message = await ContactMessage.findByIdAndUpdate(id, body, {
@@ -39,7 +40,7 @@ export async function DELETE(req, { params }) {
     if (isAuthorized.error) return NextResponse.json({ success: false, message: isAuthorized.error }, { status: isAuthorized.status });
 
     await dbConnect();
-    const { id } = params;
+    const { id } = await params;
 
     const message = await ContactMessage.findByIdAndDelete(id);
 
