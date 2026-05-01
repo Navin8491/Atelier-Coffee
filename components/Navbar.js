@@ -39,9 +39,9 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-primary/10 shadow-xl shadow-black/50">
       <div className="flex justify-between items-center px-12 py-6 w-full max-w-container-max mx-auto">
-        <div className="text-2xl font-display-lg tracking-widest uppercase text-gradient font-bold">
+        <Link href="/" className="text-2xl font-display-lg tracking-widest uppercase text-gradient font-bold hover:opacity-80 transition-opacity">
           Atelier Coffee
-        </div>
+        </Link>
         <div className="hidden md:flex gap-8 items-center">
           {navLinks.map((link) => {
             const isActive = pathname === link.href || (link.href !== '/' && pathname?.startsWith(link.href));
