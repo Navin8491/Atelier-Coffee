@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Velvet Bean - Business &amp; Careers</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;600;700&amp;family=Be+Vietnam+Pro:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed": "#241a00",
+                        "tertiary-container": "#cba72f",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#574500",
+                        "primary-fixed-dim": "#e3beb8",
+                        "inverse-on-surface": "#f8f0e1",
+                        "surface-dim": "#e1d9cb",
+                        "secondary": "#496800",
+                        "on-primary-fixed-variant": "#5b403c",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#735c00",
+                        "on-background": "#1e1b13",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#e9e2d3",
+                        "surface-container-low": "#fbf3e4",
+                        "on-primary-fixed": "#2b1613",
+                        "background": "#fff8ef",
+                        "surface-bright": "#fff8ef",
+                        "on-secondary-container": "#4e6e00",
+                        "tertiary-fixed": "#ffe088",
+                        "primary-fixed": "#ffdad4",
+                        "on-secondary-fixed": "#131f00",
+                        "on-primary-container": "#ae8d87",
+                        "secondary-container": "#c8f17a",
+                        "surface-container": "#f5edde",
+                        "outline-variant": "#d3c3c0",
+                        "on-surface-variant": "#504442",
+                        "on-error-container": "#93000a",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#1e1b13",
+                        "surface-container-highest": "#e9e2d3",
+                        "surface": "#fff8ef",
+                        "primary-container": "#3e2723",
+                        "error-container": "#ffdad6",
+                        "primary": "#271310",
+                        "inverse-surface": "#343026",
+                        "outline": "#827472",
+                        "surface-tint": "#745853",
+                        "tertiary-fixed-dim": "#e9c349",
+                        "secondary-fixed-dim": "#add461",
+                        "secondary-fixed": "#c8f17a",
+                        "inverse-primary": "#e3beb8",
+                        "surface-container-high": "#efe7d9",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "on-tertiary-container": "#4e3d00",
+                        "on-secondary-fixed-variant": "#364e00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "container-max": "1200px",
+                        "section-padding": "80px",
+                        "unit": "8px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Be Vietnam Pro"],
+                        "headline-xl": ["Noto Serif"],
+                        "headline-md": ["Noto Serif"],
+                        "headline-sm": ["Noto Serif"],
+                        "label-caps": ["Be Vietnam Pro"],
+                        "body-lg": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-xl": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .fill-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased selection:bg-tertiary-container selection:text-on-tertiary-fixed overflow-x-hidden">
+<!-- TopNavBar Component -->
+<nav class="fixed top-0 w-full z-50 bg-stone-50/80 backdrop-blur-md border-b border-stone-200/50 shadow-sm transition-all duration-300">
+<div class="max-w-[1200px] mx-auto flex justify-between items-center px-8 h-20">
+<!-- Brand Logo -->
+<a class="text-2xl font-serif italic text-amber-900 font-headline-md tracking-tight scale-95 active:scale-100 transition-transform hover:opacity-80 transition-all duration-300" href="#">
+                Velvet Bean
+            </a>
+<!-- Navigation Links (Desktop) -->
+<div class="hidden md:flex items-center gap-8 font-serif tracking-tight text-body-md">
+<a class="text-stone-700 hover:text-amber-700 transition-colors hover:opacity-80 transition-all duration-300" href="#">Sustainability</a>
+<a class="text-stone-700 hover:text-amber-700 transition-colors hover:opacity-80 transition-all duration-300" href="#">Loyalty</a>
+<a class="text-stone-700 hover:text-amber-700 transition-colors hover:opacity-80 transition-all duration-300" href="#">Events</a>
+<a class="text-amber-600 font-semibold border-b border-amber-600 pb-1" href="#">Careers</a>
+<a class="text-stone-700 hover:text-amber-700 transition-colors hover:opacity-80 transition-all duration-300" href="#">Contact</a>
+</div>
+<!-- Trailing Actions -->
+<div class="flex items-center gap-4">
+<button class="hidden md:flex items-center justify-center px-6 py-2 bg-primary text-on-primary font-label-caps tracking-wider rounded transition-colors hover:bg-primary/90">
+                    Book a Table
+                </button>
+<button class="text-amber-900 hover:opacity-80 transition-all duration-300 p-2 scale-95 active:scale-100 transition-transform">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[716px] flex items-center justify-center px-8 py-section-padding overflow-hidden">
+<!-- Background Image -->
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-primary/40 mix-blend-multiply z-10"></div>
+<img alt="Velvet Bean Atelier" class="w-full h-full object-cover object-center" data-alt="barista meticulously pouring latte art in a high-end, dimly lit cafe setting with warm ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1t73-K2AKMiX6Jrd_qaZXVg3COtt0k91L_WiJ0RRDRFASo8FgWwVY2O1iR52eILJ34QHAmllRaMYm-IXkYqi3BYdX9nXj6cAuIUiAgTfpNFpv72UVxF19eUonfHpbpRukiW9JGVSArCK8eVco0vxNI7Hv0BgK9GmCeXR9Wdg8nGK4kGXbTviXAtN0Vqsqs4JgtoIDS0cEiPJKC5QUxY9Z_pJKNbB1x0-PhwMSMr-RNrf5pARpj86JKCXDrs8Ag-LaJBA-o9iVSsrQ"/>
+</div>
+<div class="relative z-20 max-w-container-max mx-auto text-center text-on-primary">
+<h1 class="font-headline-xl text-headline-xl mb-6 tracking-tight">Shape the Future of Coffee</h1>
+<p class="font-body-lg text-body-lg max-w-2xl mx-auto mb-10 text-surface-container-low/90">
+                    Join an exclusive atelier dedicated to the pursuit of excellence. We are seeking visionaries, artisans, and partners to elevate the global coffee narrative.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<a class="px-8 py-4 bg-tertiary-container text-on-tertiary-container font-label-caps text-label-caps tracking-widest rounded hover:bg-tertiary-container/90 transition-all" href="#roles">Explore Open Roles</a>
+<a class="px-8 py-4 border border-surface-container-low text-on-primary font-label-caps text-label-caps tracking-widest rounded hover:bg-surface-container-low hover:text-primary transition-all" href="#partner">Partner With Us</a>
+</div>
+</div>
+</section>
+<!-- Join the Atelier (Job Listings) -->
+<section class="py-section-padding px-8 bg-surface" id="roles">
+<div class="max-w-container-max mx-auto">
+<div class="mb-16 text-center">
+<span class="font-label-caps text-label-caps text-tertiary tracking-widest uppercase mb-4 block">Careers</span>
+<h2 class="font-headline-md text-headline-md text-primary mb-6">Join the Atelier</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
+                        We curate our team as carefully as our beans. If you possess a deep reverence for craftsmanship and a dedication to unparalleled service, your place is here.
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Role Card 1 -->
+<div class="bg-surface-container-lowest border border-[#E6D5C3] p-8 rounded hover:shadow-lg transition-shadow duration-300 group cursor-pointer relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-tertiary-container transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
+<div class="flex justify-between items-start mb-6">
+<h3 class="font-headline-sm text-headline-sm text-primary">Head Roaster</h3>
+<span class="bg-secondary-container text-on-secondary-container font-label-caps text-label-caps px-3 py-1 rounded-sm">Full-Time</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 line-clamp-3">
+                            Lead our roasting operations with precision and artistry. You will manage our vintage Probat roasters and develop profiles for our single-origin microlots.
+                        </p>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-tertiary font-label-caps text-label-caps">London, UK</span>
+<span class="material-symbols-outlined text-primary group-hover:text-tertiary-container transition-colors">arrow_forward</span>
+</div>
+</div>
+<!-- Role Card 2 -->
+<div class="bg-surface-container-lowest border border-[#E6D5C3] p-8 rounded hover:shadow-lg transition-shadow duration-300 group cursor-pointer relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-tertiary-container transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
+<div class="flex justify-between items-start mb-6">
+<h3 class="font-headline-sm text-headline-sm text-primary">Senior Barista</h3>
+<span class="bg-secondary-container text-on-secondary-container font-label-caps text-label-caps px-3 py-1 rounded-sm">Full-Time</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 line-clamp-3">
+                            Elevate the daily ritual. We seek a master of extraction and latte art to guide our patrons through our curated espresso menu and pour-over selections.
+                        </p>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-tertiary font-label-caps text-label-caps">Paris, FR</span>
+<span class="material-symbols-outlined text-primary group-hover:text-tertiary-container transition-colors">arrow_forward</span>
+</div>
+</div>
+<!-- Role Card 3 -->
+<div class="bg-surface-container-lowest border border-[#E6D5C3] p-8 rounded hover:shadow-lg transition-shadow duration-300 group cursor-pointer relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-tertiary-container transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
+<div class="flex justify-between items-start mb-6">
+<h3 class="font-headline-sm text-headline-sm text-primary">Lounge Manager</h3>
+<span class="bg-surface-variant text-on-surface-variant font-label-caps text-label-caps px-3 py-1 rounded-sm">Leadership</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 line-clamp-3">
+                            Orchestrate the velvet experience. Oversee daily operations, ensure impeccable service standards, and cultivate an atmosphere of quiet luxury.
+                        </p>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-tertiary font-label-caps text-label-caps">Milan, IT</span>
+<span class="material-symbols-outlined text-primary group-hover:text-tertiary-container transition-colors">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Masterclass & Supply Chain Bento Grid -->
+<section class="py-section-padding px-8 bg-surface-container-low">
+<div class="max-w-container-max mx-auto">
+<div class="mb-16">
+<h2 class="font-headline-md text-headline-md text-primary mb-4">The Foundation of Excellence</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+                        Our commitment extends beyond the cup. We invest heavily in our people and our partners to ensure a sustainable, premium lineage from farm to lounge.
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[300px]">
+<!-- Bento Item 1: Masterclass (Large) -->
+<div class="md:col-span-8 row-span-2 relative rounded overflow-hidden group">
+<img alt="Masterclass Training" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="close up of roasted coffee beans cascading down with warm dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmZe2QsCKoEPXWrtyI5SrojMvLiNimTfeQPf0aiv3Nf-i3SgDRqoGn7ty-0Vr1w7Am78giFviBS8syUOgATL-tAVcEVugZp9gqPFpPZ7mdUm3l6xIyeAa2rCFF9Nvu7sFaAf4Vzm9eAf5lhGaZV3mfOpUs33Hlu8GwaeEv4sg47Xzo9-_aE8BkK-qHLeQ2i8OerZ7wbJu9FYEtt5w2RfsqKDNwkuKmQGxBxSUMJK-kDH1gSeeRZSdCp_ouzUOg4SmHFJobgKqi6Q2b"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<span class="font-label-caps text-label-caps text-tertiary-container mb-2 block">Continuous Education</span>
+<h3 class="font-headline-md text-headline-md text-on-primary mb-4">Masterclass Training</h3>
+<p class="font-body-md text-body-md text-surface-container-low max-w-md">
+                                Every team member undergoes rigorous sensory training and brewing education at our central academy, ensuring unparalleled expertise.
+                            </p>
+</div>
+</div>
+<!-- Bento Item 2: Supply Chain (Small Top Right) -->
+<div class="md:col-span-4 row-span-1 bg-surface-container-lowest border border-[#E6D5C3] rounded p-8 flex flex-col justify-center hover:bg-surface-bright transition-colors">
+<span class="material-symbols-outlined text-4xl text-tertiary mb-4">eco</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Curated Supply Chain</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">
+                            Direct trade relationships with boutique farms, ensuring ethical sourcing and exquisite flavor profiles.
+                        </p>
+</div>
+<!-- Bento Item 3: Heritage (Small Bottom Right) -->
+<div class="md:col-span-4 row-span-1 bg-primary text-on-primary rounded p-8 flex flex-col justify-center relative overflow-hidden group">
+<div class="absolute inset-0 opacity-20 group-hover:opacity-30 transition-opacity">
+<img alt="Heritage" class="w-full h-full object-cover" data-alt="vintage coffee grinder detail shot with moody lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEXw7_pKOngavakrfOHTsDldYSPTjnkQXtwri0Fn4iXjcSqA5asGCGy8eeSFsaDwtvTdhG4VXmnC_LekPniOYQR0wO0uWDAxpB8mAfV34vYMHna9cWADDWXFzbG11966eznmuxABY-2ZvX-H3vcD8Bz1HQdMu1M9esNFX9iGmDT4Vniq83EvwkgfXGNoZIE6JP1k1ViJa0MdoyfjXiBrknvCGvdlnoWG1MFRer434dV4jswxK9ATbzXVH3kmCBms1NbFftEV0DlWkj"/>
+</div>
+<div class="relative z-10">
+<h3 class="font-headline-sm text-headline-sm text-on-primary mb-2">A Legacy of Quality</h3>
+<p class="font-body-md text-body-md text-inverse-on-surface text-sm mb-4">
+                                Decades of refining the art of the perfect brew.
+                            </p>
+<a class="inline-flex items-center text-tertiary-container font-label-caps text-label-caps hover:text-tertiary-fixed transition-colors" href="#">
+                                Our Story <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Partner with Us Section -->
+<section class="py-section-padding px-8 bg-surface" id="partner">
+<div class="max-w-container-max mx-auto flex flex-col lg:flex-row gap-16 items-center">
+<div class="w-full lg:w-1/2">
+<span class="font-label-caps text-label-caps text-tertiary tracking-widest uppercase mb-4 block">Franchise Opportunities</span>
+<h2 class="font-headline-md text-headline-md text-primary mb-6">Partner with Us</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                        Bring the Velvet Bean experience to your city. We offer exclusive franchise opportunities for discerning partners who share our vision for uncompromising quality and elegant hospitality.
+                    </p>
+<ul class="space-y-4 mb-8">
+<li class="flex items-start">
+<span class="material-symbols-outlined text-tertiary mr-3 mt-1">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Turnkey architectural design matching our quiet luxury aesthetic.</span>
+</li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-tertiary mr-3 mt-1">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Comprehensive staff training and operational support.</span>
+</li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-tertiary mr-3 mt-1">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Exclusive access to our proprietary coffee blends and equipment.</span>
+</li>
+</ul>
+</div>
+<div class="w-full lg:w-1/2 bg-surface-container-lowest p-8 md:p-12 border border-[#E6D5C3] rounded shadow-sm">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-6">Inquire About Franchising</h3>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2">First Name</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-tertiary focus:ring-0 px-0 py-2 font-body-md text-primary placeholder-outline-variant transition-colors" placeholder="Enter your first name" type="text"/>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2">Last Name</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-tertiary focus:ring-0 px-0 py-2 font-body-md text-primary placeholder-outline-variant transition-colors" placeholder="Enter your last name" type="text"/>
+</div>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2">Email Address</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-tertiary focus:ring-0 px-0 py-2 font-body-md text-primary placeholder-outline-variant transition-colors" placeholder="Enter your email" type="email"/>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2">Proposed Location (City, Country)</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-tertiary focus:ring-0 px-0 py-2 font-body-md text-primary placeholder-outline-variant transition-colors" placeholder="e.g. Kyoto, Japan" type="text"/>
+</div>
+<button class="w-full py-4 bg-primary text-on-primary font-label-caps text-label-caps tracking-widest rounded hover:bg-primary/90 transition-all mt-4" type="button">
+                            Submit Inquiry
+                        </button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="w-full py-16 px-8 border-t border-stone-200 bg-stone-100">
+<div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<!-- Brand -->
+<div class="col-span-1 md:col-span-1">
+<div class="text-xl font-serif text-amber-900 font-headline-md tracking-tight mb-4">
+                    Velvet Bean
+                </div>
+<p class="font-serif text-sm tracking-wide text-stone-800">
+                    © 2024 Velvet Bean Café. Crafted for the Discerning Palette.
+                </p>
+</div>
+<!-- Links -->
+<div class="col-span-1 md:col-span-3 flex flex-wrap gap-8 justify-start md:justify-end">
+<a class="font-serif text-sm tracking-wide text-stone-500 hover:text-stone-800 hover:text-amber-600 transition-colors" href="#">Privacy Policy</a>
+<a class="font-serif text-sm tracking-wide text-stone-500 hover:text-stone-800 hover:text-amber-600 transition-colors" href="#">Terms of Service</a>
+<a class="font-serif text-sm tracking-wide text-stone-500 hover:text-stone-800 hover:text-amber-600 transition-colors" href="#">Accessibility</a>
+<a class="font-serif text-sm tracking-wide text-stone-500 hover:text-stone-800 hover:text-amber-600 transition-colors" href="#">Sustainability Report</a>
+</div>
+</div>
+</footer>
+</body></html>

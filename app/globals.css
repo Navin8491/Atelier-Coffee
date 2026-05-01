@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #09090b;
+  --color-on-background: #fafafa;
+  --color-surface: #18181b;
+  --color-on-surface: #f4f4f5;
+  --color-surface-container: #27272a;
+  --color-surface-container-high: #3f3f46;
+  --color-surface-container-low: #18181b;
+  --color-primary: #f59e0b;
+  --color-on-primary: #09090b;
+  --color-primary-container: #d97706;
+  --color-on-primary-container: #fef3c7;
+  --color-secondary: #fcd34d;
+  --color-on-secondary: #09090b;
+  --color-secondary-container: #b45309;
+  --color-outline: #52525b;
+  --color-outline-variant: #3f3f46;
+  --color-on-surface-variant: #a1a1aa;
+  
+  --color-tertiary-container: #000000;
+  --color-on-tertiary: #ffffff;
+  --color-secondary-fixed-dim: #f59e0b;
+  --color-on-secondary-fixed: #09090b;
+
+  --radius-DEFAULT: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+  
+  --spacing-container-max: 1280px;
+
+  --font-display-lg: "Outfit", sans-serif;
+  --font-body-md: "Inter", sans-serif;
+  --font-headline-md: "Outfit", sans-serif;
+  --font-body-lg: "Inter", sans-serif;
+  --font-label-md: "Inter", sans-serif;
+  --font-label-sm: "Inter", sans-serif;
+  --font-headline-lg: "Outfit", sans-serif;
+
+  --text-display-lg: 56px;
+  --text-display-lg--line-height: 1.1;
+  --text-display-lg--letter-spacing: -0.03em;
+  --text-display-lg--font-weight: 800;
+
+  --text-headline-lg: 40px;
+  --text-headline-lg--line-height: 1.2;
+  --text-headline-lg--letter-spacing: -0.02em;
+  --text-headline-lg--font-weight: 700;
+
+  --text-headline-md: 28px;
+  --text-headline-md--line-height: 1.3;
+  --text-headline-md--font-weight: 600;
+
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 1.6;
+  --text-body-lg--font-weight: 400;
+
+  --text-body-md: 16px;
+  --text-body-md--line-height: 1.6;
+  --text-body-md--font-weight: 400;
+
+  --text-label-md: 14px;
+  --text-label-md--line-height: 1.2;
+  --text-label-md--letter-spacing: 0.05em;
+  --text-label-md--font-weight: 600;
+}
+
+@layer utilities {
+  .glass-card {
+    background-color: rgba(24, 24, 27, 0.4);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(245, 158, 11, 0.15);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .glass-card:hover {
+    border-color: rgba(245, 158, 11, 0.5);
+    box-shadow: 0 8px 40px rgba(245, 158, 11, 0.2);
+    transform: translateY(-4px);
+  }
+  
+  .text-gradient {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .hero-bg {
+    background-image: linear-gradient(to bottom, rgba(9, 9, 11, 0.7), rgba(9, 9, 11, 0.95)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuCWy1vg6Mj1ATM-gChvQQCJNhDibKH4qTC5EfAnFj_WJMT9VjRlYuwBpQvi3dRA5wtK37wjuOSBjKh3xWkx3IT7_lzhub5sLa-aVT9Z2jR-QcR-rlol_YW8bLukLbuwP9mQg6LuTh5vRrT7XYXPURC6LMBEjnwTsl4ZB8AgBZCnDYdOFxS1Prs1u5y1aLdhjlbaJVqlho7qv34DRT241bVvM4Ffy5mK2iP67JswdNQWe1czz3NkOSV2bYf-6k8Pm0OJwOIJTi4v1e-5');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  
+  .glow-border {
+    box-shadow: 0 0 15px rgba(245, 158, 11, 0.3);
+  }
+  
+  .glow-text {
+    text-shadow: 0 0 20px rgba(245, 158, 11, 0.5);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}

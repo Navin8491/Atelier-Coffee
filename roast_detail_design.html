@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Velvet Bean - Signature Roast</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&amp;family=Noto+Serif:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#364e00",
+                        "surface": "#fff8ef",
+                        "outline-variant": "#d3c3c0",
+                        "primary-fixed": "#ffdad4",
+                        "error": "#ba1a1a",
+                        "on-tertiary-container": "#4e3d00",
+                        "surface-container-highest": "#e9e2d3",
+                        "secondary": "#496800",
+                        "tertiary-fixed-dim": "#e9c349",
+                        "inverse-primary": "#e3beb8",
+                        "secondary-fixed": "#c8f17a",
+                        "on-tertiary-fixed": "#241a00",
+                        "on-surface": "#1e1b13",
+                        "on-background": "#1e1b13",
+                        "surface-bright": "#fff8ef",
+                        "tertiary": "#735c00",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "inverse-on-surface": "#f8f0e1",
+                        "background": "#fff8ef",
+                        "on-primary-fixed": "#2b1613",
+                        "on-secondary-container": "#4e6e00",
+                        "tertiary-fixed": "#ffe088",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#504442",
+                        "surface-variant": "#e9e2d3",
+                        "surface-tint": "#745853",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed-dim": "#add461",
+                        "secondary-container": "#c8f17a",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed-variant": "#5b403c",
+                        "outline": "#827472",
+                        "surface-dim": "#e1d9cb",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-container": "#ae8d87",
+                        "on-error": "#ffffff",
+                        "surface-container": "#f5edde",
+                        "primary-fixed-dim": "#e3beb8",
+                        "surface-container-high": "#efe7d9",
+                        "surface-container-low": "#fbf3e4",
+                        "primary-container": "#3e2723",
+                        "on-tertiary-fixed-variant": "#574500",
+                        "inverse-surface": "#343026",
+                        "primary": "#271310",
+                        "tertiary-container": "#cba72f",
+                        "on-secondary-fixed": "#131f00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "container-max": "1200px",
+                        "section-padding": "80px",
+                        "unit": "8px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Noto Serif"],
+                        "headline-sm": ["Noto Serif"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "label-caps": ["Be Vietnam Pro"],
+                        "headline-md": ["Noto Serif"],
+                        "body-lg": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #fff8ef; color: #1e1b13; }
+        .glass-panel { background: rgba(255, 248, 239, 0.85); backdrop-filter: blur(20px); }
+        .tonal-layer { background-color: #f5edde; }
+        .card-border { border: 1px solid #E6D5C3; }
+        .gold-accent { color: #cba72f; }
+        .gold-border { border-color: #cba72f; }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col font-body-md text-body-md bg-background text-on-background selection:bg-tertiary-container selection:text-on-tertiary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-stone-50/80 dark:bg-stone-900/80 backdrop-blur-xl shadow-sm shadow-stone-900/5 border-b border-stone-200 dark:border-stone-800 transition-all duration-300">
+<div class="max-w-[1200px] mx-auto px-8 flex justify-between items-center h-24">
+<div class="flex items-center gap-8">
+<a class="text-2xl font-serif font-light tracking-[0.2em] uppercase text-stone-900 dark:text-stone-100 hover:opacity-80 transition-opacity" href="#">Velvet Bean</a>
+</div>
+<div class="hidden md:flex items-center gap-8 font-serif tracking-tight">
+<a class="text-stone-900 dark:text-stone-50 border-b-2 border-stone-900 dark:border-stone-50 pb-1 opacity-70 transition-opacity" href="#">Shop</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors duration-300 hover:opacity-80" href="#">Brew Guides</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors duration-300 hover:opacity-80" href="#">Our Story</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors duration-300 hover:opacity-80" href="#">Journal</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="hidden md:block bg-primary text-on-primary px-6 py-2 rounded-DEFAULT font-label-caps text-label-caps hover:bg-primary/90 transition-colors">Order Now</button>
+<button aria-label="shopping_bag" class="text-stone-900 dark:text-stone-50 hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+<button aria-label="person" class="text-stone-900 dark:text-stone-50 hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined">person</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="flex-grow pt-[120px] pb-section-padding">
+<div class="max-w-container-max mx-auto px-8">
+<!-- Product Hero Section -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-section-padding">
+<!-- Imagery -->
+<div class="relative h-[600px] rounded-xl overflow-hidden shadow-sm">
+<img alt="Cinematic shot of rich dark roasted coffee beans scattered on a textured matte surface with warm directional lighting" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="Cinematic shot of rich dark roasted coffee beans scattered on a textured matte surface with warm directional lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBn4NU-FFntRtah_SScYd7NgfItZDMG47w94O1H8mipJ79NW17N36QeME_U5cU_FNFXOLpelWVQNuqBCIp0BThTYKL3TU0bF1GwD76Z9cYHuUG7qv0Ihd5IdSEYLMrt4dQ08CuR4vkqX9ZhqEPP-9LmO-aUKrvBf5YVaW2BMQdZrfvWwMtrzRiFHEp0p1aOaB9NaZVgvhR9LpAjcEeJ8Jry7HBigfs3OJ2quz1f5RgwVVfoe3zImZAoLM3ytp1kae7kLS50MH3EgtU9"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+<div class="absolute bottom-6 left-6 flex gap-2">
+<span class="bg-secondary/20 text-primary px-3 py-1 rounded-lg font-label-caps text-label-caps backdrop-blur-md">Single Origin</span>
+<span class="bg-secondary/20 text-primary px-3 py-1 rounded-lg font-label-caps text-label-caps backdrop-blur-md">Dark Roast</span>
+</div>
+</div>
+<!-- Product Details & Actions -->
+<div class="flex flex-col justify-center">
+<div class="mb-8">
+<h2 class="font-label-caps text-label-caps text-tertiary tracking-widest uppercase mb-2">Ethiopia Yirgacheffe</h2>
+<h1 class="font-headline-xl text-headline-xl text-primary mb-4">Midnight Velvet Blend</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">
+                            A decadent, full-bodied roast with profound notes of dark cocoa, wild blackberry, and a lingering molasses finish. Cultivated at high altitudes for intense flavor concentration.
+                        </p>
+</div>
+<div class="flex items-center gap-6 mb-8">
+<span class="font-headline-sm text-headline-sm text-primary">$28.00</span>
+<div class="flex text-tertiary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star_half</span>
+<span class="ml-2 font-label-caps text-label-caps text-on-surface-variant pt-1">(124 Reviews)</span>
+</div>
+</div>
+<!-- Configuration Options -->
+<div class="space-y-6 mb-10">
+<div>
+<label class="block font-label-caps text-label-caps text-primary mb-3">Select Grind</label>
+<div class="grid grid-cols-3 gap-3">
+<button class="py-3 border border-outline-variant rounded-DEFAULT font-label-caps text-label-caps text-primary hover:border-tertiary hover:bg-surface-container transition-colors focus:border-tertiary focus:ring-1 focus:ring-tertiary">Whole Bean</button>
+<button class="py-3 border border-outline-variant rounded-DEFAULT font-label-caps text-label-caps text-primary hover:border-tertiary hover:bg-surface-container transition-colors">Coarse (French Press)</button>
+<button class="py-3 border border-outline-variant rounded-DEFAULT font-label-caps text-label-caps text-primary hover:border-tertiary hover:bg-surface-container transition-colors">Fine (Espresso)</button>
+</div>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps text-primary mb-3">Select Size</label>
+<div class="grid grid-cols-2 gap-3">
+<button class="py-3 border border-tertiary bg-surface-container rounded-DEFAULT font-label-caps text-label-caps text-primary">12 oz (Standard)</button>
+<button class="py-3 border border-outline-variant rounded-DEFAULT font-label-caps text-label-caps text-primary hover:border-tertiary hover:bg-surface-container transition-colors">2 lbs (Value)</button>
+</div>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex flex-col gap-4">
+<button class="w-full bg-primary text-on-primary py-4 rounded-DEFAULT font-label-caps text-label-caps hover:bg-primary/90 transition-colors shadow-sm shadow-primary/20 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">shopping_bag</span>
+                            Add to Cart
+                        </button>
+<button class="w-full border border-tertiary text-tertiary py-4 rounded-DEFAULT font-label-caps text-label-caps hover:bg-tertiary/5 transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">event_repeat</span>
+                            Subscribe &amp; Save 15%
+                        </button>
+</div>
+</div>
+</div>
+<!-- The Story & Sensory Profile (Bento Layout) -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-section-padding">
+<!-- The Story -->
+<div class="lg:col-span-2 bg-surface-container-highest rounded-xl p-10 card-border flex flex-col justify-center">
+<h3 class="font-headline-md text-headline-md text-primary mb-6">The Origin Story</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6 leading-relaxed">
+                        Sourced exclusively from the renowned Chelbesa washing station in the Gedeb district of Yirgacheffe. Grown at a staggering 2,100 meters above sea level, these heirloom varietals mature slowly under a dense canopy of shade trees. This prolonged maturation period allows the cherries to develop complex sugars, resulting in a cup profile that is intensely aromatic and deeply nuanced.
+                    </p>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-6 border-t border-outline-variant/30">
+<div>
+<span class="block font-label-caps text-label-caps text-on-surface-variant mb-1">Origin</span>
+<span class="font-headline-sm text-headline-sm text-primary text-lg">Ethiopia</span>
+</div>
+<div>
+<span class="block font-label-caps text-label-caps text-on-surface-variant mb-1">Region</span>
+<span class="font-headline-sm text-headline-sm text-primary text-lg">Yirgacheffe</span>
+</div>
+<div>
+<span class="block font-label-caps text-label-caps text-on-surface-variant mb-1">Altitude</span>
+<span class="font-headline-sm text-headline-sm text-primary text-lg">2,100m</span>
+</div>
+<div>
+<span class="block font-label-caps text-label-caps text-on-surface-variant mb-1">Process</span>
+<span class="font-headline-sm text-headline-sm text-primary text-lg">Washed</span>
+</div>
+</div>
+</div>
+<!-- Sensory Notes -->
+<div class="bg-surface-container rounded-xl p-10 card-border flex flex-col">
+<h3 class="font-headline-md text-headline-md text-primary mb-8">Sensory Profile</h3>
+<div class="space-y-6 flex-grow">
+<!-- Acidity -->
+<div>
+<div class="flex justify-between font-label-caps text-label-caps text-primary mb-2">
+<span>Acidity</span>
+<span>Bright / Citrus</span>
+</div>
+<div class="h-1 bg-outline-variant/30 rounded-full overflow-hidden">
+<div class="h-full bg-tertiary w-3/4 rounded-full"></div>
+</div>
+</div>
+<!-- Body -->
+<div>
+<div class="flex justify-between font-label-caps text-label-caps text-primary mb-2">
+<span>Body</span>
+<span>Syrupy / Heavy</span>
+</div>
+<div class="h-1 bg-outline-variant/30 rounded-full overflow-hidden">
+<div class="h-full bg-tertiary w-4/5 rounded-full"></div>
+</div>
+</div>
+<!-- Sweetness -->
+<div>
+<div class="flex justify-between font-label-caps text-label-caps text-primary mb-2">
+<span>Sweetness</span>
+<span>Molasses</span>
+</div>
+<div class="h-1 bg-outline-variant/30 rounded-full overflow-hidden">
+<div class="h-full bg-tertiary w-2/3 rounded-full"></div>
+</div>
+</div>
+</div>
+<div class="pt-8 mt-8 border-t border-outline-variant/30">
+<span class="block font-label-caps text-label-caps text-on-surface-variant mb-3">Tasting Notes</span>
+<div class="flex flex-wrap gap-2">
+<span class="bg-secondary/10 text-on-secondary-fixed-variant px-3 py-1 rounded-lg font-label-caps text-label-caps border border-secondary/20">Dark Cocoa</span>
+<span class="bg-secondary/10 text-on-secondary-fixed-variant px-3 py-1 rounded-lg font-label-caps text-label-caps border border-secondary/20">Blackberry</span>
+<span class="bg-secondary/10 text-on-secondary-fixed-variant px-3 py-1 rounded-lg font-label-caps text-label-caps border border-secondary/20">Molasses</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Brewing Recommendations -->
+<div class="mb-section-padding">
+<div class="text-center mb-12">
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Brewing Recommendations</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">To extract the optimal balance of dark cocoa and bright berry notes, we suggest these precise brewing parameters.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Pour Over -->
+<div class="bg-background border border-outline-variant p-8 rounded-xl hover:shadow-sm hover:border-tertiary transition-all duration-300 flex flex-col items-center text-center group">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center mb-6 text-tertiary group-hover:bg-tertiary group-hover:text-surface transition-colors">
+<span class="material-symbols-outlined text-3xl">water_drop</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-2">Pour Over (V60)</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Enhances the bright blackberry acidity.</p>
+<ul class="font-label-caps text-label-caps text-primary space-y-2 w-full pt-4 border-t border-outline-variant/30">
+<li class="flex justify-between"><span>Ratio:</span> <span>1:15</span></li>
+<li class="flex justify-between"><span>Temp:</span> <span>205°F</span></li>
+<li class="flex justify-between"><span>Time:</span> <span>3:00 min</span></li>
+</ul>
+</div>
+<!-- French Press -->
+<div class="bg-background border border-outline-variant p-8 rounded-xl hover:shadow-sm hover:border-tertiary transition-all duration-300 flex flex-col items-center text-center group">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center mb-6 text-tertiary group-hover:bg-tertiary group-hover:text-surface transition-colors">
+<span class="material-symbols-outlined text-3xl">coffee_maker</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-2">French Press</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Accentuates the heavy, syrupy body.</p>
+<ul class="font-label-caps text-label-caps text-primary space-y-2 w-full pt-4 border-t border-outline-variant/30">
+<li class="flex justify-between"><span>Ratio:</span> <span>1:12</span></li>
+<li class="flex justify-between"><span>Temp:</span> <span>200°F</span></li>
+<li class="flex justify-between"><span>Time:</span> <span>4:00 min</span></li>
+</ul>
+</div>
+<!-- Espresso -->
+<div class="bg-background border border-outline-variant p-8 rounded-xl hover:shadow-sm hover:border-tertiary transition-all duration-300 flex flex-col items-center text-center group">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center mb-6 text-tertiary group-hover:bg-tertiary group-hover:text-surface transition-colors">
+<span class="material-symbols-outlined text-3xl">local_cafe</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-2">Espresso</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Concentrates the dark cocoa finish.</p>
+<ul class="font-label-caps text-label-caps text-primary space-y-2 w-full pt-4 border-t border-outline-variant/30">
+<li class="flex justify-between"><span>Dose:</span> <span>18g</span></li>
+<li class="flex justify-between"><span>Yield:</span> <span>36g</span></li>
+<li class="flex justify-between"><span>Time:</span> <span>28 sec</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 border-t border-stone-200 dark:border-stone-800 bg-stone-100 dark:bg-stone-950 transition-all duration-500">
+<div class="max-w-[1200px] mx-auto px-8 grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="md:col-span-1 flex flex-col justify-between h-full">
+<span class="font-serif text-lg text-stone-900 dark:text-stone-50">Velvet Bean</span>
+<span class="font-serif text-xs tracking-widest uppercase text-stone-900 dark:text-stone-50 mt-8 md:mt-0">© 2024 Velvet Bean. The Art of Slow Living.</span>
+</div>
+<div class="md:col-span-3 flex flex-wrap gap-8 md:justify-end items-end font-serif text-xs tracking-widest uppercase">
+<a class="text-stone-500 dark:text-stone-400 hover:text-amber-700 dark:hover:text-amber-500 hover:opacity-70 transition-opacity duration-300" href="#">Sustainability</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-amber-700 dark:hover:text-amber-500 hover:opacity-70 transition-opacity duration-300" href="#">Wholesale</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-amber-700 dark:hover:text-amber-500 hover:opacity-70 transition-opacity duration-300" href="#">Privacy Policy</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-amber-700 dark:hover:text-amber-500 hover:opacity-70 transition-opacity duration-300" href="#">Terms</a>
+</div>
+</div>
+</footer>
+</body></html>

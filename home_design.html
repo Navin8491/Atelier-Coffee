@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Atelier Coffee | Crafting Moments</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&amp;family=Noto+Serif:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "background": "#fff8f0",
+                        "on-tertiary": "#ffffff",
+                        "on-background": "#1e1b16",
+                        "inverse-on-surface": "#f7f0e7",
+                        "tertiary-container": "#282f21",
+                        "surface-container-high": "#eee7de",
+                        "surface": "#fff8f0",
+                        "surface-tint": "#745853",
+                        "surface-container": "#f4ede4",
+                        "on-primary-container": "#ae8d87",
+                        "primary-container": "#3e2723",
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#f9f3ea",
+                        "inverse-primary": "#e3beb8",
+                        "tertiary-fixed": "#dde5d0",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#e8e2d9",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#33302a",
+                        "tertiary": "#141a0d",
+                        "secondary-fixed-dim": "#e9c176",
+                        "error": "#ba1a1a",
+                        "surface-dim": "#dfd9d0",
+                        "outline": "#827472",
+                        "on-primary-fixed-variant": "#5b403c",
+                        "secondary": "#775a19",
+                        "on-tertiary-container": "#8f9784",
+                        "on-tertiary-fixed": "#171e10",
+                        "on-secondary-fixed": "#261900",
+                        "primary": "#271310",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "outline-variant": "#d3c3c0",
+                        "primary-fixed": "#ffdad4",
+                        "on-tertiary-fixed-variant": "#424939",
+                        "surface-bright": "#fff8f0",
+                        "secondary-container": "#fed488",
+                        "on-surface-variant": "#504442",
+                        "on-primary": "#ffffff",
+                        "surface-container-highest": "#e8e2d9",
+                        "on-surface": "#1e1b16",
+                        "tertiary-fixed-dim": "#c1c9b5",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#e3beb8",
+                        "on-secondary-container": "#785a1a",
+                        "on-primary-fixed": "#2b1613",
+                        "secondary-fixed": "#ffdea5",
+                        "surface-container-lowest": "#ffffff"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "md": "1.5rem",
+                        "container-max": "1280px",
+                        "sm": "1rem",
+                        "xs": "0.5rem",
+                        "gutter": "24px",
+                        "unit": "4px",
+                        "lg": "2.5rem",
+                        "xl": "4rem"
+                    },
+                    fontFamily: {
+                        "display-lg": ["Noto Serif", "serif"],
+                        "body-md": ["Manrope", "sans-serif"],
+                        "headline-md": ["Noto Serif", "serif"],
+                        "body-lg": ["Manrope", "sans-serif"],
+                        "label-md": ["Manrope", "sans-serif"],
+                        "label-sm": ["Manrope", "sans-serif"],
+                        "headline-lg": ["Noto Serif", "serif"]
+                    },
+                    fontSize: {
+                        "display-lg": ["48px", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700" }],
+                        "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "headline-md": ["24px", { lineHeight: "1.3", fontWeight: "600" }],
+                        "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "label-md": ["14px", { lineHeight: "1.2", letterSpacing: "0.05em", fontWeight: "600" }],
+                        "label-sm": ["12px", { lineHeight: "1.2", letterSpacing: "0.1em", fontWeight: "700" }],
+                        "headline-lg": ["32px", { lineHeight: "1.2", fontWeight: "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>.glass-card {
+    background-color: rgba(255, 248, 239, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(233, 193, 118, 0.2);
+    box-shadow: 0 10px 40px -10px rgba(62, 39, 35, 0.08)
+    }
+.hero-bg {
+    background-image: linear-gradient(to bottom, rgba(30, 27, 22, 0.4), rgba(30, 27, 22, 0.7)), url(https://lh3.googleusercontent.com/aida-public/AB6AXuCWy1vg6Mj1ATM-gChvQQCJNhDibKH4qTC5EfAnFj_WJMT9VjRlYuwBpQvi3dRA5wtK37wjuOSBjKh3xWkx3IT7_lzhub5sLa-aVT9Z2jR-QcR-rlol_YW8bLukLbuwP9mQg6LuTh5vRrT7XYXPURC6LMBEjnwTsl4ZB8AgBZCnDYdOFxS1Prs1u5y1aLdhjlbaJVqlho7qv34DRT241bVvM4Ffy5mK2iP67JswdNQWe1czz3NkOSV2bYf-6k8Pm0OJwOIJTi4v1e-5);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed
+    }</style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-stone-50/70 dark:bg-stone-900/70 backdrop-blur-md border-b border-[#3E2723]/5 dark:border-stone-800 shadow-xl shadow-[#3E2723]/5">
+<div class="flex justify-between items-center px-12 py-6 w-full max-w-container-max mx-auto">
+<div class="text-2xl font-serif tracking-widest uppercase text-[#3E2723] dark:text-stone-100 font-headline-lg text-primary-container">
+                Atelier Coffee
+            </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-serif text-sm tracking-widest uppercase text-[#3E2723] dark:text-white border-b border-[#3E2723] dark:border-stone-100 pb-1 font-label-md" href="#">Home</a>
+<a class="font-serif text-sm tracking-widest uppercase text-[#3E2723]/60 dark:text-stone-400 hover:text-[#3E2723] dark:hover:text-white transition-colors duration-500 font-label-md" href="#">Menu</a>
+<a class="font-serif text-sm tracking-widest uppercase text-[#3E2723]/60 dark:text-stone-400 hover:text-[#3E2723] dark:hover:text-white transition-colors duration-500 font-label-md" href="#">Shop</a>
+<a class="font-serif text-sm tracking-widest uppercase text-[#3E2723]/60 dark:text-stone-400 hover:text-[#3E2723] dark:hover:text-white transition-colors duration-500 font-label-md" href="#">Locations</a>
+<a class="font-serif text-sm tracking-widest uppercase text-[#3E2723]/60 dark:text-stone-400 hover:text-[#3E2723] dark:hover:text-white transition-colors duration-500 font-label-md" href="#">Story</a>
+</div>
+<div class="flex gap-6 items-center">
+<button class="text-[#3E2723] dark:text-stone-100 hover:opacity-70 transition-opacity active:scale-95 duration-300">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">shopping_bag</span>
+</button>
+<button class="text-[#3E2723] dark:text-stone-100 hover:opacity-70 transition-opacity active:scale-95 duration-300">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">person</span>
+</button>
+<a class="hidden md:inline-block bg-primary-container text-on-primary px-8 py-3 rounded-full font-label-md uppercase tracking-wider hover:bg-on-primary-fixed-variant transition-colors shadow-lg shadow-primary-container/20 active:scale-95 duration-300" href="#">
+                    Order Now
+                </a>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative h-screen w-full flex items-center justify-center hero-bg overflow-hidden" data-alt="close up of hot coffee latte art in a ceramic cup with steam rising gently, soft cinematic lighting, warm moody cafe atmosphere">
+<div class="relative z-10 text-center px-4 max-w-3xl mx-auto flex flex-col items-center">
+<h1 class="font-display-lg text-display-lg text-on-primary mb-6 drop-shadow-lg">Crafting Moments, One Sip at a Time</h1>
+<p class="font-body-lg text-body-lg text-surface-container-high mb-10 max-w-xl text-center">Experience the quiet luxury of ethically sourced beans, masterfully roasted to awaken the senses.</p>
+<a class="inline-flex items-center justify-center bg-secondary-fixed-dim text-on-secondary-fixed px-10 py-4 rounded-full font-label-md uppercase tracking-wider hover:bg-secondary-fixed transition-colors shadow-lg shadow-secondary-fixed-dim/20 active:scale-95 duration-300" href="#curations">
+                Explore Curations
+            </a>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-surface-container-high">
+<span class="material-symbols-outlined text-3xl">keyboard_arrow_down</span>
+</div>
+</header>
+<main>
+<!-- The Velvet Bean Philosophy -->
+<section class="py-24 px-6 md:px-12 max-w-container-max mx-auto">
+<div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+<div class="w-full lg:w-1/2 relative">
+<div class="aspect-[4/5] rounded-xl overflow-hidden shadow-2xl shadow-primary-container/10">
+<img alt="Barista pouring latte art" class="w-full h-full object-cover" data-alt="barista carefully pouring milk into an espresso to create intricate latte art, warm morning light, moody rustic cafe setting, high end aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkKtdErgLNYAMqHtyRdkeJ9qGDWzuvdKkWm_nCMLC0GYpRh4gMom_UIoSrS22sbCgNQx9f0C0t3k47xdD97R24pRgA02TpSVN2hb3CMCK2DK5z7a3vqNEJpmiRil1avbpA5o5MDwgamv8Afb5uG7q3H091TIDfkM3E-rpVFKH7whw4vHCNfxORG-EZ5auxyn0ALDpxOVy9TiQBM5i7pr9Mrcc7uxV0ZrPfzQ8jrJQuZe3rX9_aZQJRbWPcszrAxj5OIsxDdWU2hWtX"/>
+</div>
+<div class="absolute -bottom-8 -right-8 w-48 h-48 bg-surface-container-high rounded-full -z-10 blur-2xl opacity-60"></div>
+</div>
+<div class="w-full lg:w-1/2 flex flex-col justify-center">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest mb-4 block">Our Philosophy</span>
+<h2 class="font-headline-lg text-headline-lg text-primary-container mb-6">The Velvet Bean Approach</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6 leading-relaxed">
+                        We believe that coffee is more than a beverage; it is a ritual. A momentary pause in a bustling world. Our master roasters coax the delicate, velvet-like textures from every bean, ensuring each cup is a testament to patience and craft.
+                    </p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-10 leading-relaxed">
+                        Sourced from single-origin microlots and roasted in small batches, our selection rotates with the seasons to bring you the purest expression of terroir.
+                    </p>
+<div>
+<a class="inline-flex items-center gap-2 border border-outline px-8 py-3 rounded-full font-label-md text-primary-container uppercase tracking-wider hover:border-secondary hover:text-secondary transition-colors duration-300" href="#">
+                            Discover Our Story
+                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 0;">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Curations -->
+<section class="py-24 bg-surface-container-low px-6 md:px-12" id="curations">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest mb-4 block">Seasonal Offerings</span>
+<h2 class="font-headline-lg text-headline-lg text-primary-container">Featured Curations</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="glass-card rounded-xl overflow-hidden group cursor-pointer transition-transform duration-500 hover:-translate-y-2">
+<div class="h-64 overflow-hidden">
+<img alt="Ethiopian Yirgacheffe Pour Over" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="elegant glass pour over coffee carafe on a light wooden table, bright soft natural lighting, minimalist high end coffee setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZzMolGEpbZup0W_OJO4AgLTiQU-1vv0EcVxOSdY9k2SvBOEJgDHoAFrpPnADxCYlHAMjmKxMdyqaoE5yhVl_5Rh9yh8wdHCJubH0cW4pX9fxNYtRyjj9uC0CxF5VSIvTsSNOUU-HuE5Gwv2gUxAdwAV1Mq0sZKH4gPVSACcelMhdz9vjWYKa12Q3Bw6kK4aoXArRxwffz8364GVa_Sk6nAdyg3rbomn02GRZOTJSQ-Lu4V7tEJ-E73QkZgedIik2Uz5keF0IJj46d"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline-md text-headline-md text-primary-container">Ethiopian Yirgacheffe</h3>
+<span class="font-label-md text-label-md text-secondary">$8.00</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2">Delicate floral notes of jasmine intertwined with bright bergamot and a clean, honeyed finish.</p>
+<button class="w-full py-3 border border-outline-variant rounded-full font-label-md text-primary-container uppercase tracking-wider hover:bg-primary-container hover:text-on-primary transition-colors duration-300">
+                                Order Reserve
+                            </button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="glass-card rounded-xl overflow-hidden group cursor-pointer transition-transform duration-500 hover:-translate-y-2">
+<div class="h-64 overflow-hidden relative">
+<div class="absolute top-4 left-4 z-10 bg-tertiary-container/80 backdrop-blur-sm text-on-tertiary px-3 py-1 rounded-full font-label-sm uppercase tracking-wider">New</div>
+<img alt="Smoked Vanilla Latte" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="creamy latte in a dark ceramic mug resting on a saucer, subtle steam, dark moody wooden background, warm side lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQ8eb8T4tpBmMKMq3eejBfz4_7Q_HohbQf5bWdokNU_n2s6taqIGqEq4EvLE94DjdOrnA1WnILIpHMEvDbXhA4lEZYbfFSQyOv9_-wyG-0RyH5TOEOP7lTB_ekUv58wITgembfWrMcSJ2Uc6Jyk1VXV913bCWZxSliL1DxUdWGhH2or1iqTQMq_6v940pw0ZjVnVp7CI_t1gvf7JCr6jaHt7KmRL3jMhHdS-QPeq3PqvGNJx0Ge9eo7CFDtYsiDuqj0O8-BTvH2VPM"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline-md text-headline-md text-primary-container">Smoked Vanilla Latte</h3>
+<span class="font-label-md text-label-md text-secondary">$6.50</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2">Our signature espresso blended with house-smoked Madagascar vanilla and perfectly microfoamed milk.</p>
+<button class="w-full py-3 border border-outline-variant rounded-full font-label-md text-primary-container uppercase tracking-wider hover:bg-primary-container hover:text-on-primary transition-colors duration-300">
+                                Order Reserve
+                            </button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="glass-card rounded-xl overflow-hidden group cursor-pointer transition-transform duration-500 hover:-translate-y-2">
+<div class="h-64 overflow-hidden">
+<img alt="Kyoto Cold Brew" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="tall glass of iced cold brew coffee with condensation on the outside, sitting on a marble counter, bright fresh lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFgcj4bqi3X77OXIGSEcTWlbVZwAphdGVkVrqEnJIPgy9jqVSwWtVdyRm-8h2tzqqxsMwTHLLnl7Q6puBGxV-ikEgvx5etA9p7e1O2m9ab7XidHsLYpUbNE2ODqPxUDjOjo133nKO24CMSZ9EjCyYsttMAo883lLjPc7KgTKq5QgGaNqeXVRVWRPYYMJj9KyxUoF8WC7tV8OhJTKtIe9lkdgD7L5vfA42sTXNly6YZCkXJ78rbo-HGCaXyINzTZuh6SRw2LTk0SitS"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline-md text-headline-md text-primary-container">Kyoto Cold Brew</h3>
+<span class="font-label-md text-label-md text-secondary">$7.00</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2">Slow-dripped over 14 hours. A syrupy, deeply complex brew highlighting dark chocolate and dark cherry notes.</p>
+<button class="w-full py-3 border border-outline-variant rounded-full font-label-md text-primary-container uppercase tracking-wider hover:bg-primary-container hover:text-on-primary transition-colors duration-300">
+                                Order Reserve
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Moments of Calm -->
+<section class="py-24 px-6 md:px-12 max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest mb-4 block">Atmosphere</span>
+<h2 class="font-headline-lg text-headline-lg text-primary-container">Moments of Calm</h2>
+</div>
+<a class="font-label-md text-label-md text-primary-container flex items-center gap-2 hover:text-secondary transition-colors" href="#">
+                    Follow @ateliercoffee
+                    <span class="material-symbols-outlined text-sm">arrow_outward</span>
+</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px]">
+<div class="col-span-2 row-span-2 rounded-xl overflow-hidden group">
+<img alt="Cafe Interior" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="spacious modern cafe interior with large windows, minimalist wooden furniture, warm sunlight streaming in, high end architectural photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCckzHTQYyJmq_sRK62L6pSscmmj8lMbJATVG1SdsBRQXww0Tj3BSpk9gmgZdgeUVCUYmDua6w7_5uc8rNSCtM6tSLyBZ-07fRHejO983s-_bpUHam1slkF_5S4GPOEkWoqmENdAtDC5Sktc63Bz_XN67rVrA7NHEDg3xAJoEZbVu9tur7hGIueHmFS1yvlXQPaBxjRMauTJrV-S1dkY0oYmfwwi1e7yBP7R5JlwEpWg-RfRQ_JJOTI-AnjkrHpsL7EvpuETBtkCEDZ"/>
+</div>
+<div class="rounded-xl overflow-hidden group">
+<img alt="Coffee Beans" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="close up macro shot of freshly roasted coffee beans spilling from a burlap sack, rich brown tones, sharp focus, dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPhWbsXsc_4KCM_plDUVEXDjrVNThZcu9hG65sZE5zWmHVb_IatKee7FoYICJRTXQs2btNTp4soIlRXc444pvplJyHEUXhC7z8xtXT69FCBDaGAGBAyh_NTIFFTc19mSAz56eo_JbyEn9rl8VTPNGDmEvTirl5QB5Kp4F1zuE4V1moXxGwi5xNDBg5ExH5T17cGDS-eT2u3TiWKxR1OYzyYOsdbeSEdBhiRO4-M_qD5194c12WkoKfuz_-YxZPiTI3CAqicGOx3a7p"/>
+</div>
+<div class="rounded-xl overflow-hidden group">
+<img alt="Pastries" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="flaky artisan croissants on a marble plate next to a cup of espresso, warm soft morning light, elegant food photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvt3wFLP_bMuxygQqOVYoVx0LwZd1buCfmW8zLy3An_c8NXIttbTxespu5Dr7t_ASZhxRHNHZMiva6Sgy3ddVxkJU7LTHxIFtNfu0umuot-sydQK04jiOa0xQmewwwXQfThPavmsYdNItairwzEGuSV53n6S7LNWm16gkupwVX0cLuI8vVmmaGSzCb4ksf5fuqy9LRYO-24AoIkLABYv1rXL-qVg9LN8hoTt7-ptT66zDb8tQMuC20eMzeIC23jXPEBp74UX_br29n"/>
+</div>
+<div class="col-span-2 rounded-xl overflow-hidden group">
+<img alt="Reading with coffee" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="overhead view of a person holding an open book next to a half empty latte on a rustic wooden table, cozy aesthetic, warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDONFErqhNu2U2N3cSirOrkwxo5NHzOH8Vb3j_Z6JDBHbazE-jJxtt-HaAKWiXnfUO6xH-61RB_rLhqeJ6XOXr0midiKffFa2zLBLdmutm6g5XnslFnilUDqTnI2SmW7OWKw8sAHrg4R1ln0fIVnofpUoZYt8ieGjN3RbGVrU4ZGxPuRZaket_mOkXr47lIgl_kIe47XNTUWk1zeV8Z6dbB1LoIYOav0oBrKVbEiO6ZX8W6hV6gwKalUcX8KGp8FgxEU0qLUfVPdQAe"/>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-50 dark:bg-stone-950 text-[#3E2723] dark:text-stone-200 font-serif text-xs tracking-wider w-full py-16 border-t border-[#3E2723]/10 dark:border-stone-800">
+<div class="max-w-7xl mx-auto flex flex-col items-center gap-8 px-8">
+<div class="text-lg font-serif tracking-widest uppercase text-[#3E2723] dark:text-stone-100 font-headline-md">
+                Atelier Coffee
+            </div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-[#3E2723]/70 dark:text-stone-400 hover:text-[#3E2723] dark:hover:text-white underline underline-offset-4 transition-all opacity-80 hover:opacity-100 duration-300 font-label-md" href="#">Privacy Policy</a>
+<a class="text-[#3E2723]/70 dark:text-stone-400 hover:text-[#3E2723] dark:hover:text-white underline underline-offset-4 transition-all opacity-80 hover:opacity-100 duration-300 font-label-md" href="#">Terms of Service</a>
+<a class="text-[#3E2723]/70 dark:text-stone-400 hover:text-[#3E2723] dark:hover:text-white underline underline-offset-4 transition-all opacity-80 hover:opacity-100 duration-300 font-label-md" href="#">Contact</a>
+</div>
+<div class="text-[#3E2723]/70 dark:text-stone-400 font-label-sm">
+                © 2024 Atelier Coffee. All Rights Reserved.
+            </div>
+</div>
+</footer>
+</body></html>

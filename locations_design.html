@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Atelier Coffee - Locations</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&amp;family=Noto+Serif:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#fff8f0",
+                        "on-tertiary": "#ffffff",
+                        "on-background": "#1e1b16",
+                        "inverse-on-surface": "#f7f0e7",
+                        "tertiary-container": "#282f21",
+                        "surface-container-high": "#eee7de",
+                        "surface": "#fff8f0",
+                        "surface-tint": "#745853",
+                        "surface-container": "#f4ede4",
+                        "on-primary-container": "#ae8d87",
+                        "primary-container": "#3e2723",
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#f9f3ea",
+                        "inverse-primary": "#e3beb8",
+                        "tertiary-fixed": "#dde5d0",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#e8e2d9",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#33302a",
+                        "tertiary": "#141a0d",
+                        "secondary-fixed-dim": "#e9c176",
+                        "error": "#ba1a1a",
+                        "surface-dim": "#dfd9d0",
+                        "outline": "#827472",
+                        "on-primary-fixed-variant": "#5b403c",
+                        "secondary": "#775a19",
+                        "on-tertiary-container": "#8f9784",
+                        "on-tertiary-fixed": "#171e10",
+                        "on-secondary-fixed": "#261900",
+                        "primary": "#271310",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "outline-variant": "#d3c3c0",
+                        "primary-fixed": "#ffdad4",
+                        "on-tertiary-fixed-variant": "#424939",
+                        "surface-bright": "#fff8f0",
+                        "secondary-container": "#fed488",
+                        "on-surface-variant": "#504442",
+                        "on-primary": "#ffffff",
+                        "surface-container-highest": "#e8e2d9",
+                        "on-surface": "#1e1b16",
+                        "tertiary-fixed-dim": "#c1c9b5",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#e3beb8",
+                        "on-secondary-container": "#785a1a",
+                        "on-primary-fixed": "#2b1613",
+                        "secondary-fixed": "#ffdea5",
+                        "surface-container-lowest": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "1.5rem",
+                        "container-max": "1280px",
+                        "sm": "1rem",
+                        "xs": "0.5rem",
+                        "gutter": "24px",
+                        "unit": "4px",
+                        "lg": "2.5rem",
+                        "xl": "4rem"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Noto Serif"],
+                        "body-md": ["Manrope"],
+                        "headline-md": ["Noto Serif"],
+                        "body-lg": ["Manrope"],
+                        "label-md": ["Manrope"],
+                        "label-sm": ["Manrope"],
+                        "headline-lg": ["Noto Serif"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 248, 239, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 222, 165, 0.3);
+            box-shadow: 0 20px 40px rgba(62, 39, 35, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar (Shared Component) -->
+<nav class="fixed top-0 w-full z-50 bg-stone-50/70 dark:bg-stone-900/70 backdrop-blur-md border-b border-[#3E2723]/5 dark:border-stone-800 shadow-xl shadow-[#3E2723]/5">
+<div class="flex justify-between items-center px-12 py-6 w-full max-w-container-max mx-auto">
+<div class="text-2xl font-serif tracking-widest uppercase text-[#3E2723] dark:text-stone-100">
+                Atelier Coffee
+            </div>
+<div class="hidden md:flex space-x-8">
+<a class="font-serif text-sm tracking-widest uppercase text-[#3E2723]/60 dark:text-stone-400 hover:text-[#3E2723] dark:hover:text-white transition-colors duration-500" href="#">Home</a>
+<a class="font-serif text-sm tracking-widest uppercase text-[#3E2723]/60 dark:text-stone-400 hover:text-[#3E2723] dark:hover:text-white transition-colors duration-500" href="#">Menu</a>
+<a class="font-serif text-sm tracking-widest uppercase text-[#3E2723]/60 dark:text-stone-400 hover:text-[#3E2723] dark:hover:text-white transition-colors duration-500" href="#">Shop</a>
+<a class="font-serif text-sm tracking-widest uppercase text-[#3E2723] dark:text-white border-b border-[#3E2723] dark:border-stone-100 pb-1" href="#">Locations</a>
+<a class="font-serif text-sm tracking-widest uppercase text-[#3E2723]/60 dark:text-stone-400 hover:text-[#3E2723] dark:hover:text-white transition-colors duration-500" href="#">Story</a>
+</div>
+<div class="flex items-center space-x-6">
+<button class="font-serif text-sm tracking-widest uppercase text-[#3E2723] dark:text-stone-100 hidden md:block">Order Now</button>
+<div class="flex space-x-4 text-[#3E2723] dark:text-stone-100">
+<button class="active:scale-95 transition-transform duration-300">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">shopping_bag</span>
+</button>
+<button class="active:scale-95 transition-transform duration-300">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">person</span>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pt-[104px] flex flex-col md:flex-row h-screen overflow-hidden">
+<!-- Sidebar -->
+<aside class="w-full md:w-[400px] lg:w-[480px] bg-surface flex flex-col h-full border-r border-outline-variant/30 z-10 shadow-[20px_0_40px_rgba(62,39,35,0.03)] shrink-0">
+<div class="p-lg flex-shrink-0">
+<h1 class="font-headline-lg text-headline-lg text-primary mb-md">Our Ateliers</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg">Find your nearest sanctuary for craft coffee and quiet reflection.</p>
+<button class="w-full bg-primary-container text-surface py-md px-xl rounded-DEFAULT font-label-md text-label-md flex items-center justify-center gap-xs hover:bg-primary transition-colors duration-300 shadow-[0_4px_14px_rgba(62,39,35,0.15)] active:translate-y-[2px]">
+<span class="material-symbols-outlined text-[18px]">my_location</span>
+                    Find Nearest Cafe
+                </button>
+</div>
+<div class="overflow-y-auto px-lg pb-xl space-y-md">
+<!-- Location Card 1 (Active) -->
+<div class="glass-panel p-md rounded-lg relative overflow-hidden group cursor-pointer transition-transform duration-300 hover:-translate-y-1">
+<div class="absolute top-0 left-0 w-1 h-full bg-secondary-container"></div>
+<div class="flex justify-between items-start mb-xs">
+<h3 class="font-headline-md text-headline-md text-primary">The Roastery</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-xs py-[2px] rounded-full">0.8 mi</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-sm">124 Artisan Alley, Downtown</p>
+<div class="flex items-center gap-xs text-on-surface-variant mb-md font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+                        Open until 8:00 PM
+                    </div>
+<div class="flex gap-sm">
+<button class="flex-1 border border-secondary text-primary py-xs rounded-DEFAULT font-label-md text-label-md hover:bg-secondary-container/10 transition-colors">Directions</button>
+<button class="flex-1 bg-surface-container text-primary py-xs rounded-DEFAULT font-label-md text-label-md hover:bg-surface-variant transition-colors">Order Ahead</button>
+</div>
+</div>
+<!-- Location Card 2 -->
+<div class="bg-surface-container-low border border-outline-variant/30 p-md rounded-lg relative overflow-hidden group cursor-pointer transition-all duration-300 hover:glass-panel hover:-translate-y-1">
+<div class="flex justify-between items-start mb-xs">
+<h3 class="font-headline-md text-headline-md text-primary group-hover:text-primary transition-colors">Westside Pavilion</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-xs py-[2px] rounded-full">2.4 mi</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-sm">890 Horizon Boulevard</p>
+<div class="flex items-center gap-xs text-on-surface-variant mb-md font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+                        Open until 7:00 PM
+                    </div>
+<div class="flex gap-sm opacity-60 group-hover:opacity-100 transition-opacity">
+<button class="flex-1 border border-secondary text-primary py-xs rounded-DEFAULT font-label-md text-label-md hover:bg-secondary-container/10 transition-colors">Directions</button>
+<button class="flex-1 bg-surface-container text-primary py-xs rounded-DEFAULT font-label-md text-label-md hover:bg-surface-variant transition-colors">Order Ahead</button>
+</div>
+</div>
+<!-- Location Card 3 -->
+<div class="bg-surface-container-low border border-outline-variant/30 p-md rounded-lg relative overflow-hidden group cursor-pointer transition-all duration-300 hover:glass-panel hover:-translate-y-1">
+<div class="flex justify-between items-start mb-xs">
+<h3 class="font-headline-md text-headline-md text-primary group-hover:text-primary transition-colors">North Market</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-xs py-[2px] rounded-full">4.1 mi</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-sm">450 Mercantile Square</p>
+<div class="flex items-center gap-xs text-on-surface-variant mb-md font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+                        Open until 6:00 PM
+                    </div>
+<div class="flex gap-sm opacity-60 group-hover:opacity-100 transition-opacity">
+<button class="flex-1 border border-secondary text-primary py-xs rounded-DEFAULT font-label-md text-label-md hover:bg-secondary-container/10 transition-colors">Directions</button>
+<button class="flex-1 bg-surface-container text-primary py-xs rounded-DEFAULT font-label-md text-label-md hover:bg-surface-variant transition-colors">Order Ahead</button>
+</div>
+</div>
+</div>
+</aside>
+<!-- Map Area -->
+<div class="flex-grow relative bg-[#EBE4D8] overflow-hidden">
+<!-- Simulated Map Background -->
+<img alt="Map view" class="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-multiply" data-alt="abstract minimalist city map design in cream and soft beige tones with subtle street lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBH4NHoFMX4wjkervAHefvn1NtxEVxiVFJcoc-ZmZeypXIKsM5J45KBb2mDhglWWylgDtCQGmuRAm29QztaRBAWWtKE7i95z-s2ZSix7xSbhW9ckZCNaMfHqwBa-Z4wSnXg1IhItxIf9ao196K4uV41h544jHS-AY_Hy0ZWOY8qY6zEwVd6clsoK9q0ceJadL4vhTaaWUY09KIRETaeVvfjxJ_3cSyAXygpPu7QN85JOboP34mFWtetqZ6ziYYWSspsQH3KIu9_M1U9"/>
+<!-- Map Overlay Gradient for warmth -->
+<div class="absolute inset-0 bg-gradient-to-tr from-[#EBE4D8]/80 to-[#F4EDE4]/40 pointer-events-none"></div>
+<!-- Map Controls -->
+<div class="absolute bottom-xl right-lg flex flex-col gap-sm z-20">
+<button class="glass-panel w-12 h-12 rounded-full flex items-center justify-center text-primary hover:bg-surface transition-colors active:translate-y-[2px]">
+<span class="material-symbols-outlined">add</span>
+</button>
+<button class="glass-panel w-12 h-12 rounded-full flex items-center justify-center text-primary hover:bg-surface transition-colors active:translate-y-[2px]">
+<span class="material-symbols-outlined">remove</span>
+</button>
+<button class="glass-panel w-12 h-12 rounded-full flex items-center justify-center text-primary hover:bg-surface transition-colors mt-sm active:translate-y-[2px]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">near_me</span>
+</button>
+</div>
+<!-- Custom Pins & Previews -->
+<!-- Pin 1 (Active) -->
+<div class="absolute top-[40%] left-[50%] z-30 group">
+<div class="relative -translate-x-1/2 -translate-y-full cursor-pointer">
+<span class="material-symbols-outlined text-secondary-container text-4xl drop-shadow-md" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<!-- Active Indicator -->
+<div class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-4 h-1 bg-primary/20 rounded-full blur-[2px]"></div>
+</div>
+<!-- Glass Preview Card -->
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-64 glass-panel p-sm rounded-lg opacity-100 transition-opacity duration-300">
+<div class="w-full h-24 mb-sm rounded-DEFAULT overflow-hidden">
+<img alt="The Roastery exterior" class="w-full h-full object-cover" data-alt="warm inviting exterior of a modern coffee roastery with large glass windows and soft interior lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOASOlcNvb6b6DtqcA5D9cRh9Q7hjnCBJuSuut0dvKliYx-KjOpvZIJW2MT5WLvB8Or7lkpGKRTd2JpvFVlRRGPVEYgvyrkrbP3HqxM5ZJwBWLVgieacm22oZxFCwD2Zgv_ua9v6pyn9hr1CTnneQHbzgl7TvD_NGuSiDMfMD8z4852af6lnjHOzaMlhMhhvRFSHFqLM1u_g44t8PgDUUQqW3l6yAGl12u59VGx7FklYxF8Qw-Xn_F7Rhw6YwU3bnQuntkSXhwsek8"/>
+</div>
+<h4 class="font-headline-md text-[18px] text-primary leading-tight mb-xs">The Roastery</h4>
+<p class="font-body-md text-label-sm text-on-surface-variant">Closes at 8:00 PM</p>
+</div>
+</div>
+<!-- Pin 2 (Inactive) -->
+<div class="absolute top-[25%] left-[30%] z-20 group">
+<div class="relative -translate-x-1/2 -translate-y-full cursor-pointer hover:-translate-y-[calc(100%+4px)] transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl drop-shadow-sm" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<!-- Hover Preview -->
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 glass-panel p-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+<h4 class="font-headline-md text-[16px] text-primary leading-tight">Westside Pavilion</h4>
+<p class="font-body-md text-label-sm text-on-surface-variant mt-1">2.4 mi away</p>
+</div>
+</div>
+<!-- Pin 3 (Inactive) -->
+<div class="absolute top-[65%] left-[70%] z-20 group">
+<div class="relative -translate-x-1/2 -translate-y-full cursor-pointer hover:-translate-y-[calc(100%+4px)] transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl drop-shadow-sm" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<!-- Hover Preview -->
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 glass-panel p-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+<h4 class="font-headline-md text-[16px] text-primary leading-tight">North Market</h4>
+<p class="font-body-md text-label-sm text-on-surface-variant mt-1">4.1 mi away</p>
+</div>
+</div>
+</div>
+</main>
+</body></html>

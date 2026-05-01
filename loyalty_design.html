@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Velvet Bean - Loyalty &amp; Rewards</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&amp;family=Noto+Serif:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed": "#241a00",
+                        "tertiary-container": "#cba72f",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#574500",
+                        "primary-fixed-dim": "#e3beb8",
+                        "inverse-on-surface": "#f8f0e1",
+                        "surface-dim": "#e1d9cb",
+                        "secondary": "#496800",
+                        "on-primary-fixed-variant": "#5b403c",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#735c00",
+                        "on-background": "#1e1b13",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#e9e2d3",
+                        "surface-container-low": "#fbf3e4",
+                        "on-primary-fixed": "#2b1613",
+                        "background": "#fff8ef",
+                        "surface-bright": "#fff8ef",
+                        "on-secondary-container": "#4e6e00",
+                        "tertiary-fixed": "#ffe088",
+                        "primary-fixed": "#ffdad4",
+                        "on-secondary-fixed": "#131f00",
+                        "on-primary-container": "#ae8d87",
+                        "secondary-container": "#c8f17a",
+                        "surface-container": "#f5edde",
+                        "outline-variant": "#d3c3c0",
+                        "on-surface-variant": "#504442",
+                        "on-error-container": "#93000a",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#1e1b13",
+                        "surface-container-highest": "#e9e2d3",
+                        "surface": "#fff8ef",
+                        "primary-container": "#3e2723",
+                        "error-container": "#ffdad6",
+                        "primary": "#271310",
+                        "inverse-surface": "#343026",
+                        "outline": "#827472",
+                        "surface-tint": "#745853",
+                        "tertiary-fixed-dim": "#e9c349",
+                        "secondary-fixed-dim": "#add461",
+                        "secondary-fixed": "#c8f17a",
+                        "inverse-primary": "#e3beb8",
+                        "surface-container-high": "#efe7d9",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "on-tertiary-container": "#4e3d00",
+                        "on-secondary-fixed-variant": "#364e00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "container-max": "1200px",
+                        "section-padding": "80px",
+                        "unit": "8px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Be Vietnam Pro"],
+                        "headline-xl": ["Noto Serif"],
+                        "headline-md": ["Noto Serif"],
+                        "headline-sm": ["Noto Serif"],
+                        "label-caps": ["Be Vietnam Pro"],
+                        "body-lg": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-xl": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased pt-20">
+<!-- TopNavBar (Shared Component) -->
+<nav class="fixed top-0 w-full z-50 bg-stone-50/80 dark:bg-stone-950/80 backdrop-blur-md border-b border-stone-200/50 dark:border-stone-800/50 shadow-sm transition-all duration-300">
+<div class="max-w-[1200px] mx-auto flex justify-between items-center px-8 h-20">
+<!-- Brand -->
+<a class="text-2xl font-serif italic text-amber-900 dark:text-amber-500 hover:opacity-80 transition-all duration-300 scale-95 active:scale-100 transition-transform" href="#">
+                Velvet Bean
+            </a>
+<!-- Navigation Links (Desktop) -->
+<div class="hidden md:flex space-x-8 items-center font-serif tracking-tight">
+<a class="text-stone-700 dark:text-stone-300 hover:text-amber-700 transition-colors hover:opacity-80 duration-300" href="#">Sustainability</a>
+<a class="text-amber-600 dark:text-amber-400 font-semibold border-b border-amber-600 pb-1" href="#">Loyalty</a>
+<a class="text-stone-700 dark:text-stone-300 hover:text-amber-700 transition-colors hover:opacity-80 duration-300" href="#">Events</a>
+<a class="text-stone-700 dark:text-stone-300 hover:text-amber-700 transition-colors hover:opacity-80 duration-300" href="#">Careers</a>
+<a class="text-stone-700 dark:text-stone-300 hover:text-amber-700 transition-colors hover:opacity-80 duration-300" href="#">Contact</a>
+</div>
+<!-- Actions -->
+<div class="flex items-center space-x-6">
+<button class="hidden md:flex items-center space-x-2 text-stone-700 dark:text-stone-300 hover:text-amber-700 transition-colors hover:opacity-80 duration-300">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded hover:bg-surface-tint transition-colors duration-300 font-label-caps tracking-wider scale-95 active:scale-100 transition-transform">
+                    Book a Table
+                </button>
+</div>
+</div>
+</nav>
+<main class="w-full">
+<!-- Hero Section -->
+<section class="relative w-full min-h-[614px] flex items-center justify-center pt-20 px-4 md:px-8 overflow-hidden bg-surface-container">
+<div class="absolute inset-0 z-0">
+<img alt="Elegant dark roasted coffee beans scattered on a premium textured surface with soft warm moody lighting" class="w-full h-full object-cover opacity-30 mix-blend-multiply" data-alt="Elegant dark roasted coffee beans scattered on a premium textured surface with soft warm moody lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0lQakMF3fKi0ikxySqcB0NbeDlUxturdIUGRQ7zDhH6x2cx_t7JZ_9AFdoDv8Nl-qNYLx4JwrN9AWlQ-V9_onI0d1qUNysR2vEDEGJ9icepM6K9JC7WS7EQaNaTPtzWZIJEM_ZzDUTTFHAeVNFE1hjuG9AYOuiw8xGTjBBnZpL5x4YSgKFOTEF_VHJVXYFmjfllvTkYmvEcAEFSP2wJZ_382JhscjyZgCk91NX88MDNrVKqckovATfnBeJXmon4ebqXwpXXFYZQqB"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+</div>
+<div class="relative z-10 text-center max-w-3xl mx-auto space-y-8">
+<h1 class="font-headline-xl text-headline-xl text-primary">The Bean Circle</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                    A curated loyalty experience for the discerning palette. Elevate your daily ritual with exclusive access, secret menus, and rewards that matter.
+                </p>
+<div class="flex justify-center gap-4 pt-4">
+<button class="bg-primary text-on-primary font-label-caps text-label-caps px-8 py-4 rounded hover:bg-surface-tint transition-colors">Join the Circle</button>
+<button class="border border-tertiary-container text-tertiary-container font-label-caps text-label-caps px-8 py-4 rounded hover:bg-surface-container-low transition-colors">Sign In</button>
+</div>
+</div>
+</section>
+<!-- Balance Check (Existing Users) -->
+<section class="py-section-padding px-4 md:px-8 bg-background max-w-[container-max] mx-auto">
+<div class="bg-surface-container-low border border-surface-variant rounded-xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-[0_4px_24px_rgba(39,19,16,0.03)]">
+<div class="flex items-center gap-6">
+<div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-3xl" data-icon="account_circle">account_circle</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Check Your Balance</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Enter your Member ID to view points.</p>
+</div>
+</div>
+<div class="flex w-full md:w-auto gap-4">
+<input class="w-full md:w-64 bg-transparent border-b border-outline-variant focus:border-tertiary-container pb-2 px-0 font-body-md text-on-surface placeholder-on-surface-variant/50 focus:ring-0 transition-colors" placeholder="Member ID" type="text"/>
+<button class="text-tertiary-container hover:text-on-tertiary-container transition-colors flex items-center gap-2">
+<span class="font-label-caps text-label-caps">Check</span>
+<span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Tiers Section -->
+<section class="py-section-padding px-4 md:px-8 bg-surface">
+<div class="max-w-[container-max] mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-md text-headline-md text-primary">Membership Tiers</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-4 max-w-xl mx-auto">Progress through our curated tiers as you explore our offerings. Each level unlocks new layers of the Velvet Bean experience.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Bronze Card -->
+<div class="bg-surface-container-lowest border border-surface-variant rounded-lg p-8 relative overflow-hidden group hover:shadow-[0_8px_32px_rgba(39,19,16,0.05)] transition-all duration-300">
+<div class="absolute top-0 right-0 p-6 opacity-10">
+<span class="material-symbols-outlined text-6xl" data-icon="coffee">coffee</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface-variant mb-2">Bronze</h3>
+<p class="font-body-md text-body-md text-on-surface-variant/80 mb-6 border-b border-surface-variant pb-6">Entry Level</p>
+<ul class="space-y-4 font-body-md text-body-md text-on-surface">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary-container text-sm" data-icon="check">check</span>
+                                Earn 1 point per $1 spent
+                            </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary-container text-sm" data-icon="check">check</span>
+                                Complimentary Birthday Pastry
+                            </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary-container text-sm" data-icon="check">check</span>
+                                Monthly Newsletter
+                            </li>
+</ul>
+</div>
+<!-- Silver Card -->
+<div class="bg-surface-container-low border border-outline-variant rounded-lg p-8 relative overflow-hidden group hover:shadow-[0_8px_32px_rgba(39,19,16,0.05)] transition-all duration-300 transform md:-translate-y-4">
+<div class="absolute top-0 right-0 p-6 opacity-10">
+<span class="material-symbols-outlined text-6xl text-primary" data-icon="workspace_premium">workspace_premium</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Silver</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 border-b border-surface-variant pb-6">250 Points Required</p>
+<ul class="space-y-4 font-body-md text-body-md text-on-surface">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary-container text-sm" data-icon="check">check</span>
+                                Earn 1.5 points per $1 spent
+                            </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary-container text-sm" data-icon="check">check</span>
+                                Complimentary Birthday Pastry &amp; Drink
+                            </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary-container text-sm" data-icon="check">check</span>
+                                Early Access to New Blends
+                            </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary-container text-sm" data-icon="check">check</span>
+                                1 Free Refill per visit
+                            </li>
+</ul>
+</div>
+<!-- Gold Card -->
+<div class="bg-primary border border-primary-container rounded-lg p-8 relative overflow-hidden group hover:shadow-[0_8px_32px_rgba(39,19,16,0.1)] transition-all duration-300">
+<div class="absolute top-0 right-0 p-6 opacity-10">
+<span class="material-symbols-outlined text-6xl text-tertiary-container" data-icon="diamond">diamond</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-tertiary-container mb-2">Gold</h3>
+<p class="font-body-md text-body-md text-primary-fixed-dim mb-6 border-b border-primary-container pb-6">1000 Points Required</p>
+<ul class="space-y-4 font-body-md text-body-md text-on-primary">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary-container text-sm" data-icon="check">check</span>
+                                Earn 2 points per $1 spent
+                            </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary-container text-sm" data-icon="check">check</span>
+                                Exclusive 'Secret Menu' Access
+                            </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary-container text-sm" data-icon="check">check</span>
+                                Priority Seating Booking
+                            </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary-container text-sm" data-icon="check">check</span>
+                                Annual Tasting Event Invite
+                            </li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Circle Perks Bento Grid -->
+<section class="py-section-padding px-4 md:px-8 bg-background">
+<div class="max-w-[container-max] mx-auto">
+<h2 class="font-headline-md text-headline-md text-primary mb-12">Circle Perks</h2>
+<div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-auto md:h-[600px]">
+<!-- Secret Menu (Large Span) -->
+<div class="md:col-span-2 md:row-span-2 rounded-xl relative overflow-hidden group">
+<img alt="Artisan pouring latte art into a dark ceramic cup in a dimly lit premium cafe setting" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Artisan pouring latte art into a dark ceramic cup in a dimly lit premium cafe setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD38Ov4HQBGL-m4LHDJd54AOA07ChO6AHvlWiZE-Vinx6Na9r9TnG9DEFe-yjNl2kLkjKFMgFIqJYr70ZVgl5ywjBM67B7ZZyDuodf3lG1T-cM6Ev4f1K2FjfVWZnPakpFR4TqKSm8D4Q-IwH1XBXOOXDqOVhOeJvJz_liaXl2K4YtSchILDaU64ACkwELxlGqDGXdldYhztkbmqkDvz1G-CuExPfjtrd9TC2UO4JZCXDf30U8VSpyPsb5fRyj-pP3VXlhMVZjf59Nn"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent flex flex-col justify-end p-8">
+<span class="inline-block bg-surface-container-highest/20 backdrop-blur-md text-tertiary-container font-label-caps text-label-caps px-3 py-1 rounded-full w-max mb-4">Gold Tier Exclusive</span>
+<h3 class="font-headline-sm text-headline-sm text-on-primary mb-2">The Secret Menu</h3>
+<p class="font-body-md text-body-md text-on-primary/80">Off-menu creations crafted by our head baristas, available only to our most dedicated patrons.</p>
+</div>
+</div>
+<!-- Birthday Treat -->
+<div class="md:col-span-2 bg-surface-container-low rounded-xl p-8 flex flex-col justify-center border border-surface-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-tertiary-container text-3xl mb-4" data-icon="cake">cake</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Birthday Celebrations</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">A little something sweet on your special day. Enjoy a complimentary pastry of your choice from our bakery case.</p>
+</div>
+<!-- Early Access -->
+<div class="bg-surface rounded-xl p-8 flex flex-col justify-center border border-surface-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-primary-container text-3xl mb-4" data-icon="local_cafe">local_cafe</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Early Access</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Taste our seasonal single-origin roasts before anyone else.</p>
+</div>
+<!-- Workshops -->
+<div class="bg-surface rounded-xl p-8 flex flex-col justify-center border border-surface-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-primary-container text-3xl mb-4" data-icon="event_seat">event_seat</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Workshops</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Priority booking for our monthly brewing and tasting masterclasses.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full py-16 px-8 border-t border-stone-200 dark:border-stone-800 bg-stone-100 dark:bg-stone-900 tonal shift with stone-100 background mt-20">
+<div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 font-serif text-sm tracking-wide text-stone-800 dark:text-stone-200">
+<!-- Brand Column -->
+<div class="col-span-1 md:col-span-1">
+<h4 class="text-xl font-serif text-amber-900 dark:text-amber-500 mb-4">Velvet Bean</h4>
+<p class="text-stone-500 dark:text-stone-400">© 2024 Velvet Bean Café. Crafted for the Discerning Palette.</p>
+</div>
+<!-- Links -->
+<div class="col-span-1 md:col-span-3 flex flex-wrap gap-8 justify-start md:justify-end">
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 hover:text-amber-600 transition-colors" href="#">Privacy Policy</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 hover:text-amber-600 transition-colors" href="#">Terms of Service</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 hover:text-amber-600 transition-colors" href="#">Accessibility</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 hover:text-amber-600 transition-colors" href="#">Sustainability Report</a>
+</div>
+</div>
+</footer>
+</body></html>

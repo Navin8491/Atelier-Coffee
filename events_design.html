@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Private Events | Velvet Bean</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400&amp;family=Be+Vietnam+Pro:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-fixed": "#241a00",
+                      "tertiary-container": "#cba72f",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary-fixed-variant": "#574500",
+                      "primary-fixed-dim": "#e3beb8",
+                      "inverse-on-surface": "#f8f0e1",
+                      "surface-dim": "#e1d9cb",
+                      "secondary": "#496800",
+                      "on-primary-fixed-variant": "#5b403c",
+                      "on-primary": "#ffffff",
+                      "tertiary": "#735c00",
+                      "on-background": "#1e1b13",
+                      "on-secondary": "#ffffff",
+                      "surface-variant": "#e9e2d3",
+                      "surface-container-low": "#fbf3e4",
+                      "on-primary-fixed": "#2b1613",
+                      "background": "#fff8ef",
+                      "surface-bright": "#fff8ef",
+                      "on-secondary-container": "#4e6e00",
+                      "tertiary-fixed": "#ffe088",
+                      "primary-fixed": "#ffdad4",
+                      "on-secondary-fixed": "#131f00",
+                      "on-primary-container": "#ae8d87",
+                      "secondary-container": "#c8f17a",
+                      "surface-container": "#f5edde",
+                      "outline-variant": "#d3c3c0",
+                      "on-surface-variant": "#504442",
+                      "on-error-container": "#93000a",
+                      "on-tertiary": "#ffffff",
+                      "on-surface": "#1e1b13",
+                      "surface-container-highest": "#e9e2d3",
+                      "surface": "#fff8ef",
+                      "primary-container": "#3e2723",
+                      "error-container": "#ffdad6",
+                      "primary": "#271310",
+                      "inverse-surface": "#343026",
+                      "outline": "#827472",
+                      "surface-tint": "#745853",
+                      "tertiary-fixed-dim": "#e9c349",
+                      "secondary-fixed-dim": "#add461",
+                      "secondary-fixed": "#c8f17a",
+                      "inverse-primary": "#e3beb8",
+                      "surface-container-high": "#efe7d9",
+                      "error": "#ba1a1a",
+                      "on-error": "#ffffff",
+                      "on-tertiary-container": "#4e3d00",
+                      "on-secondary-fixed-variant": "#364e00"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-mobile": "20px",
+                      "container-max": "1200px",
+                      "section-padding": "80px",
+                      "unit": "8px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "body-md": [
+                              "Be Vietnam Pro"
+                      ],
+                      "headline-xl": [
+                              "Noto Serif"
+                      ],
+                      "headline-md": [
+                              "Noto Serif"
+                      ],
+                      "headline-sm": [
+                              "Noto Serif"
+                      ],
+                      "label-caps": [
+                              "Be Vietnam Pro"
+                      ],
+                      "body-lg": [
+                              "Be Vietnam Pro"
+                      ]
+              },
+              "fontSize": {
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-xl": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 248, 239, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .text-glow {
+            text-shadow: 0 2px 10px rgba(39, 19, 16, 0.1);
+        }
+        .img-hover-zoom {
+            overflow: hidden;
+        }
+        .img-hover-zoom img {
+            transition: transform 0.7s ease-in-out;
+        }
+        .img-hover-zoom:hover img {
+            transform: scale(1.05);
+        }
+        /* Hide scrollbar for horizontal scrolling areas */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased selection:bg-tertiary-container selection:text-on-tertiary-container">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/50 shadow-sm transition-all duration-300">
+<div class="max-w-[1200px] mx-auto flex justify-between items-center px-8 h-20">
+<!-- Brand -->
+<a class="text-2xl font-headline-xl italic text-primary dark:text-tertiary-container hover:opacity-80 transition-all duration-300" href="#">
+                Velvet Bean
+            </a>
+<!-- Navigation Links (Desktop) -->
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-body-md font-body-md text-on-surface-variant hover:text-primary transition-colors hover:opacity-80" href="#">Sustainability</a>
+<a class="text-body-md font-body-md text-on-surface-variant hover:text-primary transition-colors hover:opacity-80" href="#">Loyalty</a>
+<a class="text-body-md font-body-md text-primary font-semibold border-b border-primary hover:opacity-80 transition-all duration-300" href="#">Events</a>
+<a class="text-body-md font-body-md text-on-surface-variant hover:text-primary transition-colors hover:opacity-80" href="#">Careers</a>
+<a class="text-body-md font-body-md text-on-surface-variant hover:text-primary transition-colors hover:opacity-80" href="#">Contact</a>
+</nav>
+<!-- Actions -->
+<div class="flex items-center space-x-6">
+<button class="hidden md:inline-flex items-center justify-center px-6 py-2.5 bg-primary text-on-primary font-label-caps text-label-caps rounded-full hover:bg-primary-container hover:text-on-primary-container transition-colors duration-300 scale-95 active:scale-100">
+                    Book a Table
+                </button>
+<button aria-label="shopping_bag" class="text-primary hover:opacity-80 transition-all duration-300 scale-95 active:scale-100">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">shopping_bag</span>
+</button>
+<!-- Mobile Menu Toggle -->
+<button aria-label="menu" class="md:hidden text-primary hover:opacity-80 transition-all duration-300">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[819px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Elegant sunlit interior of a high-end cafe with warm lighting, long wooden tables, and soft shadows, ideal for private events" class="w-full h-full object-cover object-center filter brightness-90" data-alt="Elegant sunlit interior of a high-end cafe with warm lighting, long wooden tables, and soft shadows, ideal for private events" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMwSKpjqAusL3veOyELsFHKv5oRC4C5au71TKtkyEH3l-JZAbxQNBOw_y9ae2ryriJJjeKe5rQjJHSil15mfXQ-ZhWKzna1ZUyFKtqpKq5SL2fJ77BIcousmq5I9A0AXiyqAaheFumaGlZV0YhEQKKDWU0_LpqjyvV7zu5c6peUWubULMLZkXpGjLBga9IQqR4xWMFtpeJQ64HOzaXy16NE9hQPUTxftG4g-zuf9F14ZF17wGp-UKFj4xO5uzD9uBFJrOv9f4wEA9O"/>
+<div class="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-20">
+<span class="block text-label-caps font-label-caps text-surface-container-highest tracking-widest mb-6 uppercase text-glow">Curated Gatherings at Aura</span>
+<h1 class="text-headline-xl font-headline-xl text-surface-container-lowest mb-8 text-glow">Elevate Your Occasion</h1>
+<p class="text-body-lg font-body-lg text-surface-container-low max-w-2xl mx-auto mb-10 text-glow">
+                    Discover a sanctuary for your most meaningful moments. From intimate artisan tastings to expansive celebrations, Velvet Bean provides a backdrop of refined warmth and exceptional craftsmanship.
+                </p>
+<a class="inline-flex items-center justify-center px-8 py-4 bg-tertiary-container text-on-tertiary-container font-label-caps text-label-caps rounded-full hover:bg-tertiary hover:text-on-tertiary transition-all duration-300 shadow-md" href="#inquire">
+                    Inquire About Dates
+                </a>
+</div>
+</section>
+<!-- The Spaces Section (Bento Grid inspired) -->
+<section class="py-section-padding px-gutter max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-headline-md font-headline-md text-primary mb-4">Our Spaces</h2>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-xl mx-auto">Thoughtfully designed environments to suit gatherings of various scales and tones.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[400px]">
+<!-- The Conservatory (Large Tile) -->
+<div class="md:col-span-8 rounded-xl overflow-hidden relative group img-hover-zoom">
+<img alt="Bright conservatory space with high glass ceilings, lush green plants, and elegant dining setups bathed in natural light" class="w-full h-full object-cover" data-alt="Bright conservatory space with high glass ceilings, lush green plants, and elegant dining setups bathed in natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMrPbbVJiEoSZ5uLn5scj4sglQC8c0AoAd_tpEnfZkLX372RXUdvPjZd2PxfTKmRdrLy9IDx-wwqAqHjW6hi3c7hlA7ik7ogDzbIjb1_qMLwX56trQ8knherC1Sdm5bj7zVYTu-iYJzCB0z6sCrVschakhxPbRK1I7kPW858awYYk1lsSwnYv2V9gtRQJ3ZibyLr81XscO6zGlcmqv6M0CxQt7HwSNgFObBODRXTiDBnG-2k43tdiLnwlJlwNPDII__MGBOqjSmsOX"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<div class="flex justify-between items-end">
+<div>
+<span class="inline-block px-3 py-1 bg-secondary-container/90 text-on-secondary-container text-label-caps font-label-caps rounded mb-3 backdrop-blur-sm">Up to 60 Guests</span>
+<h3 class="text-headline-sm font-headline-sm text-surface-container-lowest mb-2">The Conservatory</h3>
+<p class="text-body-md font-body-md text-surface-container-low max-w-md hidden md:block">A luminous, glass-enclosed atrium filled with organic textures and natural light. Perfect for daytime brunches or twilight receptions.</p>
+</div>
+<button class="w-12 h-12 rounded-full bg-surface-container-lowest/20 backdrop-blur-md flex items-center justify-center text-surface-container-lowest hover:bg-tertiary-container hover:text-on-tertiary-container transition-colors">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- The Roaster's Room (Vertical Tile) -->
+<div class="md:col-span-4 rounded-xl overflow-hidden relative group img-hover-zoom bg-surface-container">
+<img alt="Intimate dark room with vintage coffee roasting equipment, warm amber lighting, and a long wooden tasting table" class="w-full h-full object-cover" data-alt="Intimate dark room with vintage coffee roasting equipment, warm amber lighting, and a long wooden tasting table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpna8kx54IChVnAhijFKBKwycUBbv7hx_aUHE9R8k7DYN6W4FU8Rmji9t4n_XKco8K8jtR42mmtcc0TRl4Mo6W3gTcq7bKNbARsEH6EI-xoyq1JZHtrsFtrfNJKpNhHOL47ZTssSmcV3wBFxJtaUe4Vq-uUhZG5ur4fusKO0xrn02-gdC_RK70pqDmLRMbN27Atv5p8HgEWT5dzVVqI39fMK_Hy3kIsb88w4qNL_LMdHXMpapOV8EkxarrpQ6Rci3YNNk_cCPI5PXz"/>
+<div class="absolute inset-0 bg-primary/40 group-hover:bg-primary/30 transition-colors duration-500"></div>
+<div class="absolute inset-0 p-8 flex flex-col justify-end">
+<span class="inline-block px-3 py-1 bg-surface-variant/90 text-on-surface-variant text-label-caps font-label-caps rounded mb-3 self-start backdrop-blur-sm">Up to 12 Guests</span>
+<h3 class="text-headline-sm font-headline-sm text-surface-container-lowest mb-2">The Roaster's Room</h3>
+<p class="text-body-md font-body-md text-surface-container-low opacity-90">An intimate, sensory space surrounded by our vintage roasting equipment. Ideal for focused tastings and private executive meetings.</p>
+</div>
+</div>
+<!-- The Lounge (Horizontal Tile) -->
+<div class="md:col-span-12 rounded-xl overflow-hidden relative group img-hover-zoom h-[300px]">
+<img alt="Cozy lounge area with velvet armchairs, low ambient lighting, and elegant coffee tables" class="w-full h-full object-cover object-center" data-alt="Cozy lounge area with velvet armchairs, low ambient lighting, and elegant coffee tables" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkMt24zFbdf6Dt5AyRIG4F1EIzOI4i2a6Ur7EqRoToUBSjiRPGxCxIhfpyEkc7yBIuXfP91FTC0ayApednS6H7VYOH_AndSj-jDllGzOEO0b4pqbMAl5uY_jIwv6XSzjlJ_3wFmsK64oD-QYzv3pErQW4rA4HWLGc2STB3ggNOhfdhmASnxh1sJroSA0SchIBnaHW2C7afNSFQgp_Hcy6sd6JsDIUSFftb7ov95Ii-xqsvP_CWBYREA9QVuQ9bSUuVMHfHtbI7b74-"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent"></div>
+<div class="absolute inset-0 p-10 flex flex-col justify-center max-w-2xl">
+<span class="inline-block px-3 py-1 bg-secondary-container/90 text-on-secondary-container text-label-caps font-label-caps rounded mb-3 self-start">Up to 30 Guests</span>
+<h3 class="text-headline-md font-headline-md text-primary mb-4">The Velvet Lounge</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6">Plush seating, low lighting, and an atmosphere of quiet luxury. Designed for relaxed networking, creative workshops, or evening cocktails.</p>
+<a class="inline-flex items-center text-label-caps font-label-caps text-tertiary-container hover:text-tertiary transition-colors uppercase tracking-widest" href="#inquire">
+                            Request Floorplan <span class="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Curated Experiences (Asymmetric Layout) -->
+<section class="py-section-padding bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-20">
+<h2 class="text-headline-md font-headline-md text-primary mb-4">Curated Experiences</h2>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-xl mx-auto">Beyond just a space, we offer crafted sensory journeys led by our master baristas.</p>
+</div>
+<div class="space-y-24">
+<!-- Experience 1 -->
+<div class="flex flex-col md:flex-row items-center gap-16">
+<div class="w-full md:w-1/2 relative">
+<div class="aspect-[4/5] rounded-xl overflow-hidden img-hover-zoom">
+<img alt="Close-up of artisan coffee tasting setup with distinct beans, tasting notes cards, and sleek glassware on a dark wooden table" class="w-full h-full object-cover" data-alt="Close-up of artisan coffee tasting setup with distinct beans, tasting notes cards, and sleek glassware on a dark wooden table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuy2ficiNk190s5HnCgXRgZzdDmMTZehVcB8CzDE21SunSMEgYbal9fTFubikyRe0Ow89Mc0KZMLsZAaBYCWChZ9nT2JqU2bK5XIe4DQB2KdOnjH7a-FlvoRh4x3ugvEeBBTpVwymWIuRoD6mcMMqxFzzJOswOdeDV-sVaYL4jOQ9ucYk272nGi4T-k6AUS1RsdYZN1QZh3W9GtfQIbpqUuKhtZ9vAJACFR9IYZwPzKwaUw58d4RHeryOzJh-fKo2yRHqUG9h44ALe"/>
+</div>
+<!-- Decorative element -->
+<div class="absolute -bottom-8 -right-8 w-32 h-32 bg-secondary-container rounded-full mix-blend-multiply opacity-50 blur-2xl"></div>
+</div>
+<div class="w-full md:w-1/2 space-y-6">
+<span class="text-label-caps font-label-caps text-tertiary uppercase tracking-widest">Masterclass</span>
+<h3 class="text-headline-md font-headline-md text-primary">Artisan Coffee Tasting</h3>
+<p class="text-body-lg font-body-lg text-on-surface-variant">
+                                A guided exploration through our rarest single-origin reserves. Learn the nuances of acidity, body, and aroma as our head roaster leads your group through a professional cupping session.
+                            </p>
+<ul class="space-y-3 text-body-md font-body-md text-on-surface">
+<li class="flex items-center"><span class="material-symbols-outlined text-tertiary-container mr-3">check_circle</span> 90-minute guided session</li>
+<li class="flex items-center"><span class="material-symbols-outlined text-tertiary-container mr-3">check_circle</span> Tasting of 4 exclusive roasts</li>
+<li class="flex items-center"><span class="material-symbols-outlined text-tertiary-container mr-3">check_circle</span> Curated pastry pairings</li>
+</ul>
+</div>
+</div>
+<!-- Experience 2 -->
+<div class="flex flex-col md:flex-row-reverse items-center gap-16">
+<div class="w-full md:w-1/2 relative">
+<div class="aspect-[4/5] rounded-xl overflow-hidden img-hover-zoom">
+<img alt="Elegant brunch spread with artisan sourdough, fresh pastries, and beautifully poured lattes on a bright marble table" class="w-full h-full object-cover" data-alt="Elegant brunch spread with artisan sourdough, fresh pastries, and beautifully poured lattes on a bright marble table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDugUVVIYCBrmG8AMmweoK4G7RIer8qWlq2ctc_CLszH7lUbE1ItAT9_gzdjgOq0BGltIrfXJETxfqQT4tzdWV2AAW5ZJacP7YNoM4GM3J_3guRwaieMhnizzF5heMROZf842AzoVHGbg5vPLQMsXDaSkGI6NnzqgeDTaAwl6OGb9NKNbcNZ77Z8hCZlYXyKgceDpfhdi-kgy7R7OkJ4BuBN4BBJNh3WhMXg937lUph5hwWFOutlau92os5cgZtIjJfk48yrJ4DeAT8"/>
+</div>
+<div class="absolute -top-8 -left-8 w-32 h-32 bg-primary-container rounded-full mix-blend-multiply opacity-30 blur-2xl"></div>
+</div>
+<div class="w-full md:w-1/2 space-y-6">
+<span class="text-label-caps font-label-caps text-tertiary uppercase tracking-widest">Dining</span>
+<h3 class="text-headline-md font-headline-md text-primary">The Velvet Brunch</h3>
+<p class="text-body-lg font-body-lg text-on-surface-variant">
+                                Elevate your morning gatherings with a bespoke culinary experience. Our seasonal brunch menu is crafted to harmonize perfectly with our specialty coffee offerings, served in an atmosphere of unhurried luxury.
+                            </p>
+<ul class="space-y-3 text-body-md font-body-md text-on-surface">
+<li class="flex items-center"><span class="material-symbols-outlined text-tertiary-container mr-3">check_circle</span> Custom seasonal menu</li>
+<li class="flex items-center"><span class="material-symbols-outlined text-tertiary-container mr-3">check_circle</span> Unlimited specialty coffee service</li>
+<li class="flex items-center"><span class="material-symbols-outlined text-tertiary-container mr-3">check_circle</span> Dedicated hospitality team</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Inquiry Form Section (Glassmorphism & High-end UI) -->
+<section class="py-section-padding relative overflow-hidden" id="inquire">
+<!-- Background Image -->
+<div class="absolute inset-0 z-0">
+<img alt="Abstract macro shot of coffee crema with rich brown and golden tones" class="w-full h-full object-cover opacity-20" data-alt="Abstract macro shot of coffee crema with rich brown and golden tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBB8IRgs_8i12XeuNsSqO757_pi2d0SC-nMHFoIwsPFpMmiVJPJoUhilb3VJN-j5gc2kzDBRpAvdGk3gdGYm1MCStJkpjf0Hpgm1okNT5cSGn94mpU0UO5JWDojx9KgYLo9x-WdEniKusMRMurqyFFkRfcuxjzCHNlir_o4rEzh38hrPy88J7ivPVm3L6vGWE3KZ79KEbd38lpIQXObAva83CQX1_CAcahSJo6hvsg9aB57-5jCC6bI5hiy9tcY-2Ka4gF5Q5nsLALa"/>
+</div>
+<div class="max-w-4xl mx-auto px-gutter relative z-10">
+<div class="glass-panel rounded-2xl p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-surface-variant/50">
+<div class="text-center mb-10">
+<h2 class="text-headline-md font-headline-md text-primary mb-3">Begin Planning</h2>
+<p class="text-body-md font-body-md text-on-surface-variant">Share the details of your vision, and our events director will be in touch shortly.</p>
+</div>
+<form class="space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Input Group -->
+<div class="relative">
+<input class="block w-full border-0 border-b border-outline-variant bg-transparent py-3 px-0 text-body-md text-on-surface focus:border-tertiary-container focus:ring-0 peer transition-colors" id="first_name" placeholder=" " type="text"/>
+<label class="absolute top-3 left-0 text-label-caps font-label-caps text-on-surface-variant transition-all duration-300 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-tertiary-container peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:text-xs" for="first_name">First Name</label>
+</div>
+<div class="relative">
+<input class="block w-full border-0 border-b border-outline-variant bg-transparent py-3 px-0 text-body-md text-on-surface focus:border-tertiary-container focus:ring-0 peer transition-colors" id="last_name" placeholder=" " type="text"/>
+<label class="absolute top-3 left-0 text-label-caps font-label-caps text-on-surface-variant transition-all duration-300 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-tertiary-container peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:text-xs" for="last_name">Last Name</label>
+</div>
+<div class="relative">
+<input class="block w-full border-0 border-b border-outline-variant bg-transparent py-3 px-0 text-body-md text-on-surface focus:border-tertiary-container focus:ring-0 peer transition-colors" id="email" placeholder=" " type="email"/>
+<label class="absolute top-3 left-0 text-label-caps font-label-caps text-on-surface-variant transition-all duration-300 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-tertiary-container peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:text-xs" for="email">Email Address</label>
+</div>
+<div class="relative">
+<input class="block w-full border-0 border-b border-outline-variant bg-transparent py-3 px-0 text-body-md text-on-surface focus:border-tertiary-container focus:ring-0 peer transition-colors" id="phone" placeholder=" " type="tel"/>
+<label class="absolute top-3 left-0 text-label-caps font-label-caps text-on-surface-variant transition-all duration-300 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-tertiary-container peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:text-xs" for="phone">Phone Number</label>
+</div>
+</div>
+<!-- Custom Selects/Radios for Event Details -->
+<div class="pt-4">
+<span class="block text-label-caps font-label-caps text-on-surface-variant mb-4">Event Type</span>
+<div class="flex flex-wrap gap-3">
+<label class="cursor-pointer">
+<input class="peer sr-only" name="event_type" type="radio" value="tasting"/>
+<span class="inline-block px-5 py-2.5 rounded-full border border-outline-variant text-body-md font-body-md text-on-surface-variant peer-checked:bg-primary peer-checked:text-on-primary peer-checked:border-primary transition-all hover:bg-surface-variant">Tasting</span>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="event_type" type="radio" value="brunch"/>
+<span class="inline-block px-5 py-2.5 rounded-full border border-outline-variant text-body-md font-body-md text-on-surface-variant peer-checked:bg-primary peer-checked:text-on-primary peer-checked:border-primary transition-all hover:bg-surface-variant">Brunch / Dining</span>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="event_type" type="radio" value="meeting"/>
+<span class="inline-block px-5 py-2.5 rounded-full border border-outline-variant text-body-md font-body-md text-on-surface-variant peer-checked:bg-primary peer-checked:text-on-primary peer-checked:border-primary transition-all hover:bg-surface-variant">Corporate Meeting</span>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="event_type" type="radio" value="celebration"/>
+<span class="inline-block px-5 py-2.5 rounded-full border border-outline-variant text-body-md font-body-md text-on-surface-variant peer-checked:bg-primary peer-checked:text-on-primary peer-checked:border-primary transition-all hover:bg-surface-variant">Private Celebration</span>
+</label>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
+<div class="relative">
+<input class="block w-full border-0 border-b border-outline-variant bg-transparent py-3 px-0 text-body-md text-on-surface focus:border-tertiary-container focus:ring-0 peer transition-colors" id="guests" max="100" min="1" placeholder=" " type="number"/>
+<label class="absolute top-3 left-0 text-label-caps font-label-caps text-on-surface-variant transition-all duration-300 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-tertiary-container peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:text-xs" for="guests">Estimated Guest Count</label>
+</div>
+<div class="relative">
+<input class="block w-full border-0 border-b border-outline-variant bg-transparent py-3 px-0 text-body-md text-on-surface focus:border-tertiary-container focus:ring-0 peer transition-colors" id="date" placeholder=" " type="date"/>
+<label class="absolute top-3 left-0 text-label-caps font-label-caps text-on-surface-variant transition-all duration-300 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-tertiary-container peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:text-xs" for="date">Preferred Date (Optional)</label>
+</div>
+</div>
+<div class="relative pt-4">
+<textarea class="block w-full border-0 border-b border-outline-variant bg-transparent py-3 px-0 text-body-md text-on-surface focus:border-tertiary-container focus:ring-0 peer transition-colors resize-none" id="message" placeholder=" " rows="3"></textarea>
+<label class="absolute top-7 left-0 text-label-caps font-label-caps text-on-surface-variant transition-all duration-300 peer-focus:top-0 peer-focus:text-xs peer-focus:text-tertiary-container peer-[:not(:placeholder-shown)]:top-0 peer-[:not(:placeholder-shown)]:text-xs" for="message">Additional Details or Vision</label>
+</div>
+<div class="pt-6 text-center">
+<button class="inline-flex items-center justify-center px-10 py-4 bg-primary text-on-primary font-label-caps text-label-caps rounded-full hover:bg-primary-container hover:text-on-primary-container transition-all duration-300 w-full md:w-auto shadow-md" type="submit">
+                                Submit Inquiry
+                            </button>
+</div>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 px-8 border-t border-surface-variant bg-surface-container-low text-on-surface">
+<div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<!-- Brand Column -->
+<div class="col-span-1 md:col-span-1">
+<a class="text-xl font-headline-xl text-primary dark:text-tertiary-container mb-4 block" href="#">Velvet Bean</a>
+<p class="text-body-md font-body-md text-on-surface-variant">Crafting quiet luxury, one cup at a time.</p>
+</div>
+<!-- Links Columns -->
+<div class="col-span-1 flex flex-col space-y-4">
+<a class="text-body-md font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="text-body-md font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
+</div>
+<div class="col-span-1 flex flex-col space-y-4">
+<a class="text-body-md font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Accessibility</a>
+<a class="text-body-md font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Sustainability Report</a>
+</div>
+<!-- Copyright -->
+<div class="col-span-1 md:col-span-4 mt-8 pt-8 border-t border-surface-variant text-center">
+<p class="font-body-md text-sm tracking-wide text-on-surface-variant">© 2024 Velvet Bean Café. Crafted for the Discerning Palette.</p>
+</div>
+</div>
+</footer>
+</body></html>
