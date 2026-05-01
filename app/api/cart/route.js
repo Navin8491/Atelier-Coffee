@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import dbConnect from "@/lib/mongodb";
 import Cart from "@/models/Cart";
-import { jwtVerify } from "jose";
+import jwt from "jsonwebtoken";
 
 // Helper to get current session identifiers
 async function getSessionIdentifiers() {
@@ -13,8 +13,7 @@ async function getSessionIdentifiers() {
   let userId = null;
   if (token) {
     try {
-      const secret = new TextEncoder().encode(process.env.JWT_SECRET);
-      const { payload: decoded } = await jwtVerify(token, secret);
+      const decoded = jwt.verify(token, process.env.JWT_SECRET);
       userId = decoded.id;
     } catch (err) {
       // Invalid token

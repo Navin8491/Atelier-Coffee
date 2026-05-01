@@ -12,7 +12,7 @@ export async function PUT(req, { params }) {
     if (isAuthorized.error) return NextResponse.json({ success: false, message: isAuthorized.error }, { status: isAuthorized.status });
 
     await dbConnect();
-    const { id } = params;
+    const { id } = await params;
     const body = await req.json();
 
     const blog = await Blog.findByIdAndUpdate(id, body, {
@@ -39,7 +39,7 @@ export async function DELETE(req, { params }) {
     if (isAuthorized.error) return NextResponse.json({ success: false, message: isAuthorized.error }, { status: isAuthorized.status });
 
     await dbConnect();
-    const { id } = params;
+    const { id } = await params;
 
     const blog = await Blog.findByIdAndDelete(id);
 
